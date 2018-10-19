@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+
+        html, body {
+            margin: 0;
+        }
+
+        path {
+            stroke: black;
+            fill: none;
+        }
+
+        .brush .extent {
+            stroke: #ff0000;
+            stroke-width: 2px;
+            fill: #ff0000;
+            fill-opacity: .5;
+        }
+
+        .scanned {
+            fill: #999999;
+        }
+
+        .selected {
+            fill: #b3ddf2;
+        }
+
+    </style>
+</head>
+<body>
+<script src="http://d3js.org/d3.v2.min.js"></script>
+<!--<script src="/js/d3/d3.js"></script>-->
+<script type="text/javascript" src="lib/javascript.util.min.js"></script>
+<script type="text/javascript" src="jsts.min.js"></script>
+<script type="text/javascript" src="http://bl.ocks.org/d/5020993/polybrush.js"></script>
+<!--<script type="text/javascript" src="/js/polybrush/polybrush.js"></script> -->
+<script>
+
+    var width = window.innerWidth,
+        height = window.innerHeight-5,
+        wards,
+        rTree = new jsts.index.strtree.STRtree()
+    geometryFactory = new jsts.geom.GeometryFactory()
+    reader = new jsts.io.GeoJSONReader()
+
+    var chicago_star_coordinates = [
+        [235,142],[250,183],[291,174],[263, 206],[291,240],[250,231],
+        [235,272],[220,231],[179,240],[207,206],[179,174],[220,183]
+    ]
+    var projection_scale = 262144
+    var projection_translate = [64067.99158620712, 33803.783882904165]
+
+    var projection = d3.geo.mercator()
+        .translate(projection_translate)
+        .scale(projection_scale)
+
+    var path = d3.geo.path()
+        .projection(projection)
+
+    var brush = d3.svg.polybrush()
+        .x(d3.scale.identity().domain([0, width]))
+        .y(d3.scale.identity().domain([0, height]))
+        .on("brush", brushed)
+        .extent(chicago_star_coordinates)
+
+    var svg = d3.select("body")
+        .append("svg")
+        .attr("width", width)
+        .attr("height", height)
+
+    d3.json(window.location.hostname == "localhost" ? "/gists/chicago_ward_remap/wards_2015.json" : "http://bl.ocks.org/d/2271944/wards_2015.json", function(json) {
+        wards = svg.selectAll("path.ward").data(json.features)
+            .enter()
+            .append("svg:path")
+            .attr("class","ward-outline")
+            .attr("d", function(d) { return path(d.geometry) })
+
+        wards.append("svg:title")
+            .text(function(d) { return d.properties.WARD })
+            .attr("class", "ward")
+            .each(function (d) {
+                d.polygon = reader.read(d.geometry)
+                rTree.insert(d.polygon.getEnvelopeInternal(), d)
+            })
+
+        svg.append("g")
+            .attr("class", "brush")
+            .call(brush)
+
+        brushed()
+    })
+
+    function brushed() {
+        var extent = brush.extent()
+        if(extent.length == 0) return
+
+        wards
+            .each(function(d) { d.scanned = d.selected = false })
+
+        coordinates = []
+        extent.forEach(function(vertex) {
+            var p = projection.invert(vertex)
+            coordinates.push(new jsts.geom.Coordinate(p[0], p[1]))
+        })
+
+        // close polygon
+        coordinates.push(coordinates[0])
+
+        var shell = geometryFactory.createLinearRing(coordinates)
+        var searchPolygon = geometryFactory.createPolygon(shell)
+
+        rTree.query(searchPolygon.getEnvelopeInternal()).forEach(function(d) {
+            d.scanned = true
+            if(d.polygon.intersects(searchPolygon)) d.selected = true
+        })
+
+        wards
+            .classed("scanned", function(d) { return d.scanned })
+            .classed("selected", function(d) { return d.selected })
+    }
+
+</script>
+</body>

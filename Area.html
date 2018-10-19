@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Area</title>
+    <style>
+        body { text-align:center }
+        canvas { display:block; margin:1em auto; border:1px solid #ccc }
+    </style>
+    <script src="lib/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+<span id="filled"></span>/<span id="area"></span> (<span id="pct"></span>%)
+
+<canvas width="800" height="600"></canvas>
+
+<script>
+    $(function(){
+        var canvas = $('canvas');
+        var context = canvas[0].getContext("2d");
+
+        var $fill = $('#filled'),
+            $pct = $('#pct');
+
+        var draw = false;
+        var x_prev, y_prev;
+
+        var w = canvas.attr('width'),
+            h = canvas.attr('height'),
+            area = w*h;
+        $('#area').html(area);
+
+        context.lineWidth = 10;
+        context.lineCap = 'round';
+
+        canvas.mousedown(function(e) {
+            draw = true;
+            x_prev = e.pageX - this.offsetLeft;
+            y_prev = e.pageY - this.offsetTop;
+        });
+
+        $(window).mouseup(function() {
+            draw = false
+        });
+        canvas.mousemove(function(e) {
+            if (draw) {
+                context.beginPath();
+                context.moveTo(e.pageX - this.offsetLeft, e.pageY - this.offsetTop);
+                context.lineTo(x_prev, y_prev);
+                context.stroke();
+                context.closePath();
+                x_prev = e.pageX - this.offsetLeft;
+                y_prev = e.pageY - this.offsetTop;
+                updateArea();
+            }
+        });
+
+        function updateArea() {
+            var data = context.getImageData(0, 0, w, h).data;
+            for (var ct=0, i=3, len=data.length; i<len; i+=4) if (data[i]>50) ct++;
+            $fill.html(ct);
+            $pct.html((100 * ct / area).toFixed(2));
+        }
+    });
+</script>
+</body>
+</html>

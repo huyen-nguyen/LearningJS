@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript</title>
+    <script src="./lib/d3.min.js"></script>
+</head>
+<style>
+    .line {
+        stroke: blue;
+        stroke-width: 2;
+        fill: none;
+    }
+    .straightLine {
+        stroke: mediumaquamarine;
+        stroke-width: 2;
+    }
+    body {
+        font-family: "Trebuchet MS";
+    }
+    h1{
+        color: mediumaquamarine;
+        font-size: 200%;
+    }
+
+     path {
+         fill: none;
+         stroke: #000;
+         stroke-width: 3px;
+         stroke-linejoin: round;
+         stroke-linecap: round;
+     }
+
+</style>
+
+<body>
+<h1>WebStorm is live on Google Chrome!</h1>
+<h3>Please recycle: Bottles, Cans, ...</h3>
+
+<ol style="list-style-type: circle">
+    <li>Coffee</li>
+    <li>Milk</li>
+    <li>Tea</li>
+</ol>
+
+<!--SCRIPT-->
+
+<script src="//d3js.org/d3.v4.min.js"></script>
+<script>
+
+d3.select('h3').style('color', 'orange');
+d3.select('h3').style('font-size', '20px');
+
+// DATA BINDING
+var fruits = ['apple', 'mango', 'banana', 'orange'];
+
+var ul = d3.select('body').append('ul');
+
+var list = ul.selectAll('li')
+    .data(fruits)
+    .enter()
+    .append('li')
+    .text(d=>d);
+
+// Bar chart
+var data = [80, 120, 60, 150, 200];
+var heightUnit = 20;
+
+var bar = d3.select("body").append()
+            .selectAll('rect')
+            .data(data)
+            .enter()
+            .append('rect')
+            .attr('width', d => d)
+            .attr('height', heightUnit - 3)
+            .attr('transform', ((d, i) => {return "translate(0," + i * heightUnit + ")"}));
+
+
+var anon = (a,b) => a+b;
+
+var iden = a => a;
+
+var persons = [     // Mang gom nhieu phan tu, moi phan tu la 1 doi tuong
+    {firstname : "Malcom", lastname: "Reynolds", age: 18},
+    {firstname : "Kaylee", lastname: "Frye", age: 33},
+    {firstname : "Jayne", lastname: "Cobb", age: 35}
+];
+
+var car = {         // Doi tuong
+    model: "Mustang",
+    year: "2009",
+    color: "black",
+}
+
+numbers = [12, 29, 36, 80];
+
+total = 0;
+numbers.forEach(a => {total+=a});
+
+var items = [
+    { name: 'Edward', value: 21 },
+    { name: 'Sharpe', value: 37 },
+    { name: 'And', value: 45 },
+    { name: 'The', value: -12 },
+    { name: 'Magnetic', value: 13 },
+    { name: 'Zeros', value: 37 }
+];
+
+// sort by value
+items.sort(function (a, b) {
+    return a.value - b.value;
+});
+
+var timeZero = Date.parse('2013-01-01T00:00:00');
+//The SVG Container
+var svgContainer = d3.select("body").append("svg")
+    .attr("width", 1100)
+    .attr("height", 1000);
+
+
+var lineData = [ { "x": 1,   "y": 50},  { "x": 200,  "y": 200},
+                     { "x": 400,  "y": 100}, { "x": 600,  "y": 400},
+                     { "x": 800,  "y": 50},  { "x": 1000, "y": 600}];
+
+//This is the accessor function
+var lineFunction = d3.svg.line()
+                         .x(function(d) { return d.x; })
+                         .y(function(d) { return d.y; })
+                         .interpolate("cardinal");
+
+//The line SVG Path we draw
+var actualLine = svgContainer.append("path")
+                            .attr("d", lineFunction(lineData))
+                            .attr("class", "line");
+let test = [
+    {x: 2, y0: 2},
+    {x: 4, y0: 2},
+    {x: 4, y0: 1},
+    {x: 2, y0: 1},
+];
+
+function getArea(points){       // duplicate of polyArea(points)
+    var p1,p2;
+    for(var area=0,len=points.length,i=0;i<len;++i){
+        p1 = points[i];
+        p2 = points[(i-1+len)%len]; // Previous point, with wraparound
+        area += (p2.x+p1.x) * (p2.y0-p1.y0);
+    }
+    return Math.abs(area/2);
+}
+
+
+// var straightLineData = [{"x": 650, "y": 10}, {"x": 650, "y": 600} ]
+// Straight line
+// var straightLineFunction = d3.svg.line().x(d => d.x).y(d => d.y).interpolate("linear");
+//
+// var actualStraightLine = svgContainer.append("path")
+//     .attr("d", straightLineFunction(straightLineData))
+//     .attr("class", "straightLine");
+
+console.log(
+    anon(3,6),
+    iden(10),
+    numbers.filter(value => value % 2 === 0),
+
+    persons.map(a => {return [a.firstname, a.lastname].join(" ")}),
+
+    d3.max(persons, a => a.age),
+
+    total,
+
+    items,
+
+    timeZero,
+
+    Math.atan2(0,-10),
+
+    getArea(test)
+
+);
+
+</script>
+</body>
+</html>

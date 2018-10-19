@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hexagonal Binning</title>
+<style>
+.hexagon {
+	stroke: white;
+	stroke-width: 1.5px;
+}
+.tick {
+	stroke-width: 2px;
+	font-family: "tahoma";
+	font-size: 100%
+}
+</style>
+</head>
+<body>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/d3-hexbin.v0.2.min.js"></script>
+<script>
+var svgContainer = d3.select("body").append("svg")
+									.attr("width", 1000)
+									.attr("height", 500);
+
+var svg = d3.select("svg"),
+	margin = {top: 20, bottom: 30, left: 50, right: 30},
+	width = +svg.attr("width") - margin.left - margin.right,
+	height = +svg.attr("height") - margin.top - margin.bottom,
+	g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");		// slide past the margin
+
+	// Generate data
+var randomX = d3.randomNormal(width/2, 70),		// (expected value, standard variation)
+	randomY = d3.randomNormal(height/2, 70),
+	points = d3.range(1000).map(function() {return [randomX(), randomY()]});		// 1000 points with 2 random coordinates each
+	
+	// Generate color function
+var color = d3.interpolateLab("#ff8080", "#ff6666");	
+
+	// Hexbin generator
+var hexbin = d3.hexbin().radius(30);
+
+	// Axes
+var x = d3.scaleLinear().domain([0, width]).range([0, width]);
+var y = d3.scaleLinear().domain([0, height]).range([height, 0]);
+
+g.append("g")
+	.attr("class", "x axis tick")
+	.attr("transform", "translate(0," + height + ")")
+	.call(d3.axisBottom(x));
+
+g.append("g")
+	.attr("class", "y axis tick")
+	.call(d3.axisLeft(y));
+
+	// Crop the chart
+g.append("clipPath")
+	.attr("id", "myClip")
+	.append("rect")
+	.attr("width", width)
+	.attr("height", height);
+
+	// Hexagons
+g.append("g")
+		.attr("clip-path", "url(#myClip)")
+		.attr("class", "hexagon")
+		.selectAll("path")
+		.data(hexbin(points))		// take in each bin
+		.enter()
+		.append("path")
+		.attr("d", hexbin.hexagon())	// return path string with the specified radius 
+		.attr("transform", function(d) {return "translate(" + d.x + "," + d.y + ")"})    // slide hexagon to the right position
+		.attr("fill", function(d) {return color(d.length)});	// color with corresponding color
+
+</script>
+</body>
+</html>

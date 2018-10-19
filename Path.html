@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <style>
+        body { margin:0;position:fixed;top:0;right:0;bottom:0;left:0; }
+        svg { width:100%; height: 400px }
+
+        path {
+            fill: none;
+            stroke: steelblue;
+            stroke-width: 1.5px;
+        }
+    </style>
+</head>
+
+<body>
+<script>
+    var svg = d3.select("body").append("svg");
+
+    // change me (in Building Blocks) to see how the path description changes
+    var data = [
+        {'x': 1, 'y': 3},
+        {'x': 2, 'y': 5},
+        {'x': 3, 'y': 3.7},
+        {'x': 4, 'y': 4.5},
+        {'x': 5, 'y': 3.9},
+    ];
+
+    var x_scale = d3.scale.linear().domain([0,6]).range([0, 960]);
+    var y_scale = d3.scale.linear().domain([0,6]).range([300, 0]);
+
+    var line = d3.svg.line()
+        .x(function(d) { return x_scale(d['x']); })
+        .y(function(d) { return y_scale(d['y']); });
+
+    // path vs. line
+    console.log(line(data));
+    d3.select('body').append('code').text('Line path data: ' + line(data));
+
+    var path = svg.append('path').attr('d', line(data));
+
+    // an equivalent expression
+    var path = svg.append('path').datum(data).attr('d', line);
+</script>
+</body>

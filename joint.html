@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+    <style>
+        svg {width:1500px; height:500px}
+        button  {float:left}
+        line    {stroke:#ddd;shape-rendering: crispEdges;}
+        text    {text-anchor:middle;}
+        circle {fill:orange;stroke:orange;fill-opacity:0.5;}
+        .axis line {fill:none;stroke:#ddd;shape-rendering: crispEdges;}
+        .axis path  {fill:none;}
+        .axis text {font-size:0.7em;fill:#555;font-family:sans-serif}
+    </style>
+    <script src="http://d3js.org/d3.v3.js"></script>
+</head>
+<body>
+
+<script>
+
+    //2 different data arrays
+    var dataArray1 = [30,35,45,55,70];
+    var dataArray2 = [50,55,45,35,20,25,25,40];
+    var dataArray3 = [10,25,35,75,90];
+    var dataArray4 = [10,95,35,95,20,25,5,70];
+
+    //globals
+    var dataIndex=1;
+    var xBuffer=50;
+    var yBuffer=150;
+    var lineLength=800;
+
+
+    //create main svg element
+    var svgDoc = d3.select("body").append("svg")
+
+    svgDoc.append("text")
+        .attr("x",xBuffer)
+        .attr("y",50)
+        .text("dataset "+dataIndex);
+
+    //create axis line
+    svgDoc.append("line")
+        .attr("x1",xBuffer+lineLength)
+        .attr("y1",yBuffer)
+        .attr("y2",yBuffer);
+
+
+    svgDoc.append("g").selectAll("circle")
+        .data(eval("dataArray" + dataIndex))
+        .enter()
+        .append("circle")
+        .attr("cx",function (d, i) {
+            let spacing = lineLength / (eval("dataArray" + dataIndex).length);
+            return xBuffer + i*spacing;
+        })
+        .attr("cy", yBuffer)
+        .attr("r", d => d);
+    //create basic circles
+
+    d3.select("body").append("button")
+        .text("Update data")
+        .on("click", () => {
+            dataIndex = (dataIndex + 1) % 5;
+
+            let circle = svgDoc.select("g").selectAll("circle")
+                .data(eval("dataArray" + dataIndex));
+
+            circle.exit().remove();         // Exit
+            circle.enter().append("circle").attr("r",0);
+            // update all circle o new position
+            circle.transition()
+                .duration(500)
+                .attr("cx", function (d, i) {
+                    let spacing = lineLength / (eval("dataArray" + dataIndex).length);
+                    return xBuffer + i*spacing;})
+                    .attr("cy", yBuffer)
+                    .attr("r", d => d);
+
+            d3.select("text").text("dataset"+dataIndex);
+        });
+    // button to swap over datasets
+
+</script>
+</body>
+</html>
