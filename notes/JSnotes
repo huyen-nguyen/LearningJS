@@ -1,0 +1,5 @@
+- Call an object's property: ["property_name"]
+Example: textData[j]["community"]
+        community is a key
+
+-

@@ -2,4 +2,17 @@ https://codeburst.io/explaining-value-vs-reference-in-javascript-647a975e12a0
 
 - Variables that are assigned a non-primitive value are given a reference to that value.
 - That reference points to the object’s location in memory.
+    -- Reference -> Object's location
+    -- That reference is the only thing that variable knows
 - The variables don’t actually contain the value.
+
+________________________________________________________________________
+Compare:
+If we have two distinct objects and want to see if their properties are the same, the easiest way to do so is to turn them both into strings and then compare the strings.
+=> stringify
+
+Either == or === should not be use for comparing objects, it will only return if they have same address or not
+
+________________________________________________________________________
+We use JSON.stringify to transform the object we’re passed into a string, and then parse it back into an object with JSON.parse
+=> To copy an object
