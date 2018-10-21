@@ -2,4 +2,6 @@
 Example: textData[j]["community"]
         community is a key
 
--
++) == vs. ===
+== : compare with loose equality, only compare values after converting to the same datatype
+=== : compare with strict equality, comapre both values and datatype
