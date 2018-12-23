@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <div id="option">
+        <input name="updateButton"
+               type="button"
+               value="Update"
+               onclick="update(newData)"
+               style="position:absolute; left:20px; top: 20px"/>
+    </div>
+
+</head>
+<body>
+<script>
+    let svg = d3.select('body').append('svg').attr("width", 500).attr("height", 500);
+    let data = [{x: 100, y: 100, r: 10, id: "one"}, {x: 150, y: 200, r: 20, id: "two"}, {x: 150, y: 400, r: 40, id: "four"}]
+    svg.selectAll('circle')
+        .data(data).enter()
+        .append('circle')
+        .attr('cx', d=>d.x)
+        .attr('cy', d=>d.y)
+        .attr('r',d=> d.r);
+    let g = svg.append("g").attr("transform","translate(200,30)");
+    text = g.selectAll("text").data(["Initial Data"]).enter()
+        .append("text").text(d=>d).attr("fill","#333333");
+    var duration = 2000;
+
+    function update(newData){
+
+        //Join: Old Elements with New Data
+        let selection = svg.selectAll('circle').data(newData, d=>d.id);
+        let text =
+            g.selectAll("text")
+                .data(["New Data"])
+                .attr("fill-opacity",1)
+                .transition().duration(1000)
+                .attr("fill-opacity",10e-6);
+
+        //Remove
+        selection.exit().attr("opacity", 1.0)
+            .transition().duration(duration)
+            .attr("opacity", 10e-6).remove();
+
+        //Update
+        selection
+            .transition().duration(duration)
+            .attr("cx", d=>d.x)
+            .attr("cy", d=>d.y)
+            .attr("r", d=>d.r);
+
+        text.attr("fill-opacity",10e-6).transition().duration(1000).text(d=>d).attr("fill-opacity",1);
+
+        //Enter
+        selection.enter()
+            .append("circle")
+            .attr("cx", d=>d.x)
+            .attr("cy", d=>d.y)
+            .attr("r", d=>d.r)
+            .attr("opacity", 10e-6)
+            .transition().duration(duration)
+            .attr("opacity", 1);
+
+
+    }
+    //let newData = data.concat({x: 300, y: 200, r: 30});
+    //let newData = [{x: 300, y: 200, r: 30}];
+    let newData = [{x: 40, y: 100, r: 30, id: "three"}, {x: 200, y: 200, r: 10, id: "one"}, {x: 200, y: 300, r: 20, id: "two"}]
+
+</script>
+</body>
+</html>

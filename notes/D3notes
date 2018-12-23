@@ -1,0 +1,10 @@
+Table in D3:
+- The selection take in data, pass down as going from rows -> columns and cells.
+
+- http://christopheviau.com/d3_tutorial/
+
+- Remember: If there is an example, try to shape our data as in the example
+
+The chain: Join - Exit - Update - Enter *important
+
+

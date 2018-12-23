@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fill Form</title>
+
+    <style>
+        .navi ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+
+        }
+
+        .navi li {
+            float: left;
+        }
+
+        .navi li a {
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navi li a:hover {
+            background-color: #a9a9a9;
+        }
+
+        .navi li a:visited {
+            background-color: #fbde7c;
+        }
+    </style>
+
+</head>
+<body>
+<div id="loadingSpinner">
+    <!-- <span id="progressText"> -->
+</div>
+
+<div>
+<nav class="navi">
+<ul>
+<li style="background-color: antiquewhite"><a target="_blank" href="index.html">WordStream</a></li>
+<li><a target="_blank" href="timeArcs.html">TimeArcs</a></li>
+</ul>
+</nav>
+</div>
+
+<div>
+
+    <form id="form_id" method="post" name="myform">
+    <h2>WordStream</h2>
+    <label>Name :</label>
+    <input id="name" name="name" placeholder="Name" type="text"><br>
+    <label>Email :</label>
+    <input id="email" name="email" placeholder="Valid Email" type="text"><br>
+    <label>Contact No. :</label>
+    <input id="contact" name="contact" placeholder="Contact No." type="text"><br>
+    <input onclick="myfunction()" type="button" value="Submit"><br>
+    <span><b class="note">Note :</b> Form action will be set to <b>success.php</b> on click of submit button.</span>
+    </form>
+
+</div>
+
+
+</body>
+</html>

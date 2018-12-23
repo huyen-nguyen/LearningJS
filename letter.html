@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS</title>
+    <link rel="shortcut icon" href="images/dau.png">
+    <!--<script src="https://d3js.org/d3.v3.min.js"></script>-->
+    <!--<script src="https://d3js.org/d3.v3.min.js"></script>-->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+
+    <style>
+        text {
+            font: bold 48px monospace;
+        }
+
+        .enter {
+            fill: green;
+        }
+
+        .update {
+            fill: #333333;
+        }
+
+        .exit {
+            fill: brown;
+        }
+    </style>
+
+</head>
+<body>
+<svg width="960" height="500"></svg>
+<script>
+    var alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
+    // ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+
+    var svg = d3.select("svg"),
+        width = +svg.attr("width"),
+        height = +svg.attr("height");
+
+    var g = svg.append("g").attr("transform","translate(32," + (height/2) + ")");
+
+    function update(data){
+        var t = d3.transition().duration(800);
+
+        // join
+        var text = g.selectAll("text").data(data, d=>d);
+
+        // exit
+        text.exit()
+            .attr("class","exit")
+            .attr("fill-opacity", 1)
+            .transition(t)
+            .attr("y",60)
+            .attr("fill-opacity", 0)
+            .remove();
+
+        // update
+        text.attr("class","update")
+            .transition(t)
+            .attr("x", (d,i) => i*32);
+
+        // enter new data
+        text.enter().append("text")
+            .attr("class","enter")
+            .attr("x",(d,i) => i*32)
+            .attr("y",-60)
+            .attr("fill-opacity", 0)
+            .text(d=>d)
+            .transition(t)
+            .attr("fill-opacity", 1)
+            .attr("y",0);
+
+
+    }
+    // Initial display
+    update(alphabet);
+
+    d3.interval(function(){
+        update(d3.shuffle(alphabet).slice(0,Math.floor(Math.random() * 26)).sort())
+    },2000);
+
+       // function update(data){
+    //     var t = d3.transition().duration(400);
+    //
+    //     // Join
+    //     var letter = svg.selectAll("text").data(data);
+    //
+    //     // exit
+    //     letter.exit()
+    //         .attr("class","exit")
+    //         .attr("fill-opacity",0.1)
+    //         .transition(t)
+    //         .remove();
+    //
+    //     // update old elements that present in data
+    //     letter.attr("class","update")
+    //         .attr("y",)
+    // }
+
+
+
+</script>
+</body>
+</html>

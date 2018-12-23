@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS</title>
+    <link rel="shortcut icon" href="images/dau.png">
+    <!--<script src="https://d3js.org/d3.v3.min.js"></script>-->
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+
+    <style>
+        svg {width:500px; height:500px}
+        button  {float:left}
+        line    {stroke:#ddd;shape-rendering: crispEdges;}
+        text    {text-anchor:middle;}
+        circle {fill:orange;stroke:orange;fill-opacity:0.5;}
+        .axis line {fill:none;stroke:#ddd;shape-rendering: crispEdges;}
+        .axis path  {fill:none;}
+        .axis text {font-size:0.7em;fill:#555;font-family:sans-serif}
+    </style>
+
+</head>
+<body>
+<script>
+    //2 different data arrays
+    var dataArray1 = [30,35,45,55,70];
+    var dataArray2 = [50,55,45,35,20,25,25,40];
+
+    var dataIndex=1;
+    var x=50;
+    var y=150;
+    var lineLength=300;
+
+    var svg = d3.select("body").append("svg").attr("width",500).attr("height",500);
+
+    // title
+    svg.append("text").text("dataset "+dataIndex).attr({"x":x, "y":y});
+
+    // line
+    svg.append("line").attr({
+        "x1":x,
+        "x2":x+lineLength,
+        "y1":y,
+        "y2":y
+    })
+
+    // circle
+    svg.append("g").selectAll("circle")
+        .data(eval("dataArray"+dataIndex))
+        .enter()
+        .append("circle")
+        .attr("cx", (d,i) => {
+            var lineSpacing = lineLength/(eval("dataArray"+dataIndex).length);
+            return x + i*lineSpacing;
+        })
+        .attr("cy",y)
+        .attr("r",d => d);
+
+    // swap dataset
+    d3.select("body").append("button").text("change dataset")
+        .on("click", function (){
+            if (dataIndex == 1){
+                dataIndex = 2;
+            }
+            else {dataIndex = 1};
+
+            // rejoin data
+            // now we create circle
+            var circle = svg.selectAll("circle").data(eval("dataArray"+dataIndex)); // reJOIN data
+
+            circle.exit().remove();     // exit // remove uneeded circle
+
+            // create new circle
+            circle.enter().append("circle").attr("r",0);
+
+            // update all circle to new position
+            circle.transition().duration(1000)
+                .attr("cx", (d,i) => {
+                    var lineSpacing = lineLength/(eval("dataArray"+dataIndex).length);
+                    return x + i*lineSpacing;
+                })
+                .attr("cy",y)
+                .attr("r",d => d);
+
+            d3.select("text").text("dataset "+ dataIndex);
+        })
+
+
+
+
+</script>
+</body>
+</html>

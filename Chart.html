@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MisChart</title>
+    <link rel="shortcut icon" href="images/dau.png">
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <!--<script src="https://d3js.org/d3.v4.js"></script>-->
+
+</head>
+<body>
+<script>
+    var data = [];
+    var num = 26;
+    var min = 0, max = 15;
+    var color = "#a3a3a3";
+    var misColor = "#ff3223";
+    for (let i = 0; i < num; i++){
+        data.push(Math.random()* (max - min));
+    }
+    // var linear = d3.scale.linear().range([1,10]);
+
+    var svg = d3.select("body").append("svg")
+        .attr("width", "500")
+        .attr("height", "500");
+
+    // drawRed();
+    drawYellow();
+
+    function drawYellow() {
+        var background = svg.append("rect")
+            .attr("width", "500")
+            .attr("height", "500")
+            .attr("fill", "#836930")
+        ;
+        var lines = svg.selectAll("line").data(data).enter()
+            .append("line")
+            .attr("transform", "translate(50,100)")
+            .attr("x1", (d,i) =>  i*10)
+            .attr("x2", (d,i) =>  i*10)
+            .attr("y1", d => d)
+            .attr("y2", max +5)
+            .attr("stroke", color);
+
+        var circles = svg.selectAll("circle").data(data).enter()
+            .append("circle")
+            .attr("transform", "translate(50,100)")
+            .attr("cx", (d,i) =>  i*10)
+            .attr("cy", d => d)
+            .attr("r", 2)
+            .attr("stroke", (d,i) => {
+                if ( (i === 5)|| (i === 10)
+                    || (i === 14) || (i === 22)){
+                    return misColor;
+                }
+                else return color;
+            })
+            .attr("fill", (d,i) => {
+                if ( (i === 5)|| (i === 10)
+                    || (i === 14) || (i === 22)){
+                    return misColor;
+                }
+                else return color;
+            });
+    }
+    function drawRed() {
+        var background = svg.append("rect")
+            .attr("width", "500")
+            .attr("height", "500")
+            .attr("fill", "#641b1c")
+        ;
+        var lines = svg.selectAll("line").data(data).enter()
+            .append("line")
+            .attr("transform", "translate(50,100)")
+            .attr("x1", (d,i) =>  i*10)
+            .attr("x2", (d,i) =>  i*10)
+            .attr("y1", d => d)
+            .attr("y2", max +5)
+            .attr("stroke", color);
+
+        var circles = svg.selectAll("circle").data(data).enter()
+            .append("circle")
+            .attr("transform", "translate(50,100)")
+            .attr("cx", (d,i) =>  i*10)
+            .attr("cy", d => d)
+            .attr("r", 2)
+            .attr("stroke", (d,i) => {
+                if ((i%3 === 1) || (i%4 === 0) || (i === 5)|| (i === 10)
+                    || (i === 11)|| (i === 14) || (i === 19) || (i === 22)|| (i === 26)){
+                    return color;
+                }
+                else return misColor;
+            })
+            .attr("fill", (d,i) => {
+                if ((i%3 === 1) || (i%4 === 0) || (i === 5)|| (i === 10)
+                    || (i === 11)|| (i === 14) || (i === 19) || (i === 22) || (i === 26)){
+                    return color;
+                }
+                else return misColor;
+            });
+    }
+
+
+    console.log(linear(10))
+</script>
+</body>
+</html>
