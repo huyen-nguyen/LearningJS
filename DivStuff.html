@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Div</title>
+    <link rel="shortcut icon" href="images/dau.png">
+    <script src="https://d3js.org/d3.v3.js"></script>
+    <!--<script src="https://d3js.org/d3.v4.min.js"></script>-->
+
+    <style>
+        div.bar {
+            display: inline-block;
+            width: 20px;
+            height: 75px;
+            background-color: teal;
+            margin-right: 4px;
+        ;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+
+    var dataset = [5, 10, 13, 19, 21, 25, 22, 18, 15, 13,
+        11, 12, 15, 20, 18, 17, 16, 18, 23, 25], food;
+    // for (var i = 0; i<20; i++){
+    //     var newItem = Math.round(Math.random() * 30);
+    //     dataset.push(newItem);
+    // }
+
+    d3.select("body").selectAll("div")
+        .data(dataset)
+        .enter()
+        .append("div")
+        .attr("class","bar")
+        .style("height", d => d*5+"px");
+
+    d3.select("body").selectAll("p")
+        .data(dataset)
+        .enter()
+        .append("p")
+        .text(d => "Hi "+d)
+        .style("color", d => {
+            if (d > 29) {return "red";}
+            else {return "black";}
+        });
+
+    d3.csv("data/food.csv", function (error, data) {
+        if (error) {
+            console.log(error);
+        }
+        else {
+            console.log(data);
+            food = data;
+        }
+    })
+</script>
+
+<svg width="500" height="50">
+    <circle cx="25" cy="25" r="20" fill="rgba(128, 0, 128, 0.75)"
+            stroke="rgba(0, 255, 0, 0.25)" stroke-width="10"></circle>
+    <circle cx="75" cy="25" r="20" fill="rgba(0, 255, 0, 0.75)"
+            stroke="rgba(0, 0, 255, 0.25)" stroke-width="10"></circle>
+    <rect x="105" y="5" height="40" width="40" fill="rgba(255, 255, 0, 0.75)"
+            stroke="rgba(255, 0, 0, 0.25)" stroke-width="10"></rect>
+</svg>
+</body>
