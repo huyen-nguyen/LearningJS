@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14c1f270-d70f-4e0c-8543-075465f9e7c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/DivStuff.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SvgStuff.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/food.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scatterplot.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scatterplot2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/LearningJS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LearningJS.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blank.html" beforeDir="false" afterPath="$PROJECT_DIR$/Blank.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SvgStuff.html" beforeDir="false" afterPath="$PROJECT_DIR$/SvgStuff.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,123 +18,40 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-1424546682">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="13" />
-          <entry key="project.open.time.0" value="5" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.16" value="1" />
-          <entry key="project.open.time.27" value="1" />
-          <entry key="project.open.time.28" value="1" />
-          <entry key="project.open.time.29" value="2" />
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.30" value="1" />
-          <entry key="project.open.time.4" value="2" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.open.time.76" value="1" />
-          <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="19" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="D3notes" value="5" />
-          <entry key="JS" value="1" />
-          <entry key="JSnotes" value="2" />
-          <entry key="Reference" value="2" />
-          <entry key="css" value="1" />
-          <entry key="csv" value="2" />
-          <entry key="debug" value="1" />
-          <entry key="debugnotes" value="2" />
-          <entry key="html" value="27" />
-          <entry key="js" value="6" />
-          <entry key="png" value="1" />
-          <entry key="tsv" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CSS" value="1" />
-          <entry key="CSV" value="2" />
-          <entry key="HTML" value="27" />
-          <entry key="Image" value="1" />
-          <entry key="JavaScript" value="6" />
-          <entry key="PLAIN_TEXT" value="13" />
-          <entry key="TSV" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="D3notes" value="581" />
-          <entry key="JSnotes" value="267" />
-          <entry key="Reference" value="315" />
-          <entry key="css" value="1" />
-          <entry key="csv" value="55" />
-          <entry key="debugnotes" value="86" />
-          <entry key="html" value="6519" />
-          <entry key="js" value="296" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="CSS" value="1" />
-          <entry key="CSV" value="55" />
-          <entry key="HTML" value="6519" />
-          <entry key="JavaScript" value="296" />
-          <entry key="PLAIN_TEXT" value="1249" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/greatExample.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="24" column="27" lean-forward="true" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
-              <folding>
-                <element signature="n#style#0;n#input#0;n#div#0;n#head#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/notes/D3notes">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DivStuff.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+            <state relative-caret-position="80">
+              <caret line="29" column="8" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SvgStuff.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Scatterplot.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/SvgStuff.html">
+        <entry file="file://$PROJECT_DIR$/Scatterplot2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/food.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="1" column="8" lean-forward="true" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+            <state relative-caret-position="1054">
+              <caret line="62" column="23" lean-forward="true" selection-start-line="62" selection-start-column="23" selection-end-line="62" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -191,22 +109,17 @@
         <option value="$PROJECT_DIR$/Blank.html" />
         <option value="$PROJECT_DIR$/data/food.csv" />
         <option value="$PROJECT_DIR$/Example.html" />
-        <option value="$PROJECT_DIR$/SvgStuff.html" />
         <option value="$PROJECT_DIR$/DivStuff.html" />
+        <option value="$PROJECT_DIR$/SvgStuff.html" />
+        <option value="$PROJECT_DIR$/Scatterplot.html" />
+        <option value="$PROJECT_DIR$/Scatterplot2.html" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1724" />
-    <option name="y" value="23" />
-    <option name="width" value="795" />
-    <option name="height" value="1417" />
+    <option name="x" value="676" />
+    <option name="width" value="697" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -230,6 +143,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -261,7 +175,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -275,15 +188,16 @@
     <property name="settings.editor.selected.configurable" value="liveEdit" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GitHub\LearningJS" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/javascripts" />
       <recent name="$PROJECT_DIR$/lib" />
       <recent name="$PROJECT_DIR$/images" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/Notes" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -298,36 +212,36 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.SvgStuff.html">
-    <configuration name="DivStuff.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/LearningJS/DivStuff.html">
+  <component name="RunManager" selected="JavaScript Debug.Scatterplot.html">
+    <configuration name="DivStuff.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/LearningJS/DivStuff.html">
       <method v="2" />
     </configuration>
-    <configuration name="SvgStuff.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/LearningJS/SvgStuff.html">
+    <configuration name="Scatterplot.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/LearningJS/Scatterplot.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="TransitionSelection.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/LearningJS/TransitionSelection.html">
+    <configuration name="SvgStuff.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/LearningJS/SvgStuff.html">
       <method v="2" />
     </configuration>
-    <configuration name="simpleSlider.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/LearningJS/simpleSlider.html">
+    <configuration name="TransitionSelection.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/LearningJS/TransitionSelection.html">
       <method v="2" />
     </configuration>
-    <configuration name="slider.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/LearningJS/slider.html">
+    <configuration name="slider.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/LearningJS/slider.html">
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="JavaScript Debug.TransitionSelection.html" />
-      <item itemvalue="JavaScript Debug.simpleSlider.html" />
       <item itemvalue="JavaScript Debug.slider.html" />
       <item itemvalue="JavaScript Debug.DivStuff.html" />
       <item itemvalue="JavaScript Debug.SvgStuff.html" />
+      <item itemvalue="JavaScript Debug.Scatterplot.html" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.Scatterplot.html" />
         <item itemvalue="JavaScript Debug.SvgStuff.html" />
         <item itemvalue="JavaScript Debug.DivStuff.html" />
         <item itemvalue="JavaScript Debug.TransitionSelection.html" />
         <item itemvalue="JavaScript Debug.slider.html" />
-        <item itemvalue="JavaScript Debug.simpleSlider.html" />
       </list>
     </recent_temporary>
   </component>
@@ -360,23 +274,25 @@
       <workItem from="1545259479849" duration="5452000" />
       <workItem from="1545412821116" duration="13317000" />
       <workItem from="1546617571066" duration="14726000" />
+      <workItem from="1546658984469" duration="206000" />
+      <workItem from="1546659248173" duration="9906000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101834000" />
+    <option name="totallyTimeSpent" value="111946000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1724" y="23" width="795" height="1417" extended-state="0" />
+    <frame x="676" y="0" width="697" height="735" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21317829" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16236722" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32925898" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.13903743" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.052083332" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -391,16 +307,15 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-    <option name="exactExcludedFiles">
-      <list>
-        <option value="$PROJECT_DIR$/../tfjs-examples/webcam-transfer-learning/node_modules/vega-schema-url-parser/index.js.map" />
-        <option value="$PROJECT_DIR$/../tfjs-examples/webcam-transfer-learning/node_modules/vega-schema-url-parser/index.js" />
-        <option value="$PROJECT_DIR$/../tfjs-examples/webcam-transfer-learning/node_modules/vega-schema-url-parser/index.d.ts" />
-      </list>
-    </option>
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand>
+      <path>
+        <item name="LearningJS" type="b2602c69:ProjectViewProjectNode" />
+        <item name="LearningJS" type="462c0819:PsiDirectoryNode" />
+      </path>
+    </expand>
+    <select />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/javascripts/fisheye.js">
@@ -416,13 +331,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_unpkg.com_d3-simple-slider@0.1.2_build_d3-simple-slider.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6456">
-          <caret line="269" column="5" selection-end-line="270" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_unpkg.com_d3-simple-slider@0.1.2_build_d3-simple-slider.js" />
     <entry file="file://$PROJECT_DIR$/Test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1704">
@@ -580,41 +489,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/data/food.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notes/D3notes">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/greatExample.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="24" column="27" lean-forward="true" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+        <state relative-caret-position="408">
+          <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
           <folding>
             <element signature="n#style#0;n#input#0;n#div#0;n#head#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/notes/D3notes">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/food.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" column="8" lean-forward="true" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DivStuff.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+        <state relative-caret-position="80">
+          <caret line="29" column="8" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SvgStuff.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+        <state relative-caret-position="255">
+          <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scatterplot.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scatterplot2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="62" column="23" lean-forward="true" selection-start-line="62" selection-start-column="23" selection-end-line="62" selection-end-column="23" />
         </state>
       </provider>
     </entry>
