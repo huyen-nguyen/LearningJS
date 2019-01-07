@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Scatterplot</title>
+    <title>Scatterplot Update</title>
     <link rel="shortcut icon" href="images/dau.png">
     <script src="https://d3js.org/d3.v3.js"></script>
 
@@ -33,47 +33,40 @@
     />
 </div>
 <script>
-    // var dataset = [
-    //     [ 5, 20 ],
-    //     [ 480, 90 ],
-    //     [ 250, 50 ],
-    //     [ 100, 33 ],
-    //     [ 330, 95 ],
-    //     [ 410, 12 ],
-    //     [ 475, 44 ],
-    //     [ 25, 67 ],
-    //     [ 85, 21 ],
-    //     [ 220, 88 ],
-    //     [600, 150]
-    //
-    // ];
+    // var dataset = [ [ 5, 20 ],   [ 85, 21 ] ];
 
     var width = 700,
         height = 300,
         padding = 30;
 
     var dataset = [],
-        numDataPoint = 50,
-        maxRange = Math.random() * 1000;
+        numPoint = 100,    // number of points
+        maxRange = 1000,    //  biggest number possible
+        dataRange = Math.round(Math.random() * maxRange);   // set range once
 
-    for (var i = 0; i < numDataPoint; i++){
-        var x = Math.round(Math.random() * maxRange);
-        var y = Math.round(Math.random() * maxRange);
+    for (var i = 0; i < numPoint; i++){
+        var x = Math.round(Math.random() * dataRange);
+        var y = Math.round(Math.random() * dataRange);
         dataset.push([x,y]);
     }
 
+    // svg
+    var svg = d3.select("body").append("svg")
+        .attr({
+            width: width,
+            height: height
+        });
+
+    // Configure scale
     var xScale = d3.scale.linear()
-        .domain([0, d3.max(dataset, d => d[0])])
-        .range([padding,width - padding*2]);
+        .domain([0,d3.max(dataset, d => d[0])])
+        .range([padding, width - padding]);
 
     var yScale = d3.scale.linear()
         .domain([0,d3.max(dataset, d => d[1])])
-        .range([height-padding, padding]);
+        .range([height - padding, padding]);
 
-    var rScale = d3.scale.linear()
-        .domain([0, d3.max(dataset, d => d[1])])
-        .range([2,4]);
-
+    // Configure axis
     var xAxis = d3.svg.axis()
         .scale(xScale)
         .orient("bottom")
@@ -84,24 +77,23 @@
         .orient("left")
         .ticks(5);
 
-    var svg = d3.select("body")
-            .append("svg")
-            .attr({width: width, height: height});
-
-    // Clip Path
+    // Clip path, as a rect
     svg.append("clipPath")
-        .attr("id","chart-area")
+        .attr("id","clip")
         .append("rect")
         .attr({
+            width: width - padding * 2,
+            height: height - padding * 2,
             x: padding,
-            y: padding,
-            width: width - padding * 3,
-            height: height - padding * 2
+            y: padding
         });
 
-    // Create circles
+    // Draw: Put circle inside clip path
+    // svg first appends a group, add atrribute clip-path to that group
+    // then selectAll("circle") as usual
+
     svg.append("g")
-        .attr("clip-path","url(#chart-area)")
+        .attr("clip-path","url(#clip)")
         .selectAll("circle")
         .data(dataset)
         .enter()
@@ -109,55 +101,62 @@
         .attr({
             cx: d => xScale(d[0]),
             cy: d => yScale(d[1]),
-            r: 3,
-            // "id": xScale(d[0]) + "_" + yScale(d[1])
+            r: 4,
+            "fill": "green"
         });
 
-    // Create x axis
     svg.append("g")
-        .attr("class","x axis")
-        .attr("transform", "translate(0,"+(height-padding)+")")
+        .attr({
+            "class": "x axis",
+            "transform": "translate(0," + (height-padding) + ")"
+        })
         .call(xAxis);
 
-    // Create y axis
     svg.append("g")
-        .attr("class","y axis")
-        .attr("transform","translate(" + padding + ",0)")
+        .attr({
+            "class": "y axis",
+            "transform": "translate(" + padding + ",0)"
+        })
         .call(yAxis);
 
-    function updateData(){
-        var numValues = dataset.length;
-        var maxRange = Math.random() * 1000;
-        dataset = [];
 
-        for (var i = 0; i < numDataPoint; i++){
-            var x = Math.round(Math.random() * maxRange);
-            var y = Math.round(Math.random() * maxRange);
+    function updateData(){
+        var numValue = dataset.length;
+
+        dataRange = Math.round(Math.random() * maxRange);
+        dataset = [];
+        for (var i = 0; i < numValue; i++){
+            var x = Math.round(Math.random() * dataRange);
+            var y = Math.round(Math.random() * dataRange);
             dataset.push([x,y]);
         }
 
-        //Update scale domains
-        xScale.domain([0, d3.max(dataset, function(d) { return d[0]; })]);
-        yScale.domain([0, d3.max(dataset, function(d) { return d[1]; })]);
+        xScale.domain([0,d3.max(dataset, d => d[0])]);
+        yScale.domain([0,d3.max(dataset, d => d[1])]);
 
-        svg.selectAll("circle").data(dataset)
+        svg.selectAll("circle")
+            .data(dataset)
             .transition()
-            .duration(1000)
-            .each("start", function() {
+            .ease("circle")
+            .duration(800)
+            .each("start", function () {
                 d3.select(this)
-                    .attr("fill", "green")
-                    .attr("r", 4);
-            })
+                    .attr({
+                        "fill": "hotpink"
+                    })
+                }
+            )
             .attr({
                 cx: d => xScale(d[0]),
-                cy: d => yScale(d[1]),
+                cy: d => yScale(d[1])
             })
             .transition()
-            .duration(600)
-            .attr("fill", "black")
-            .attr("r", 3);
+            .duration(400)
+            .attr({
+                "fill": "green",
+                r: 4
+            });
 
-        // Update axis
         svg.select(".x.axis")
             .transition()
             .duration(1000)
@@ -166,8 +165,11 @@
         svg.select(".y.axis")
             .transition()
             .duration(1000)
-            .call(yAxis);
+            .call(yAxis)
+
+
     }
+
 
 
 </script>
