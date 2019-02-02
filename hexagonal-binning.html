@@ -32,11 +32,19 @@ var svg = d3.select("svg"),
 var randomX = d3.randomNormal(width/2, 70),		// (expected value, standard variation)
 	randomY = d3.randomNormal(height/2, 70),
 	points = d3.range(1000).map(function() {return [randomX(), randomY()]});		// 1000 points with 2 random coordinates each
-	
-	// Generate color function
-var color = d3.interpolateLab("#ff8080", "#ff6666");	
 
-	// Hexbin generator
+	// Generate color function
+// let color = {
+//     waterLevel: d3.scale.linear().domain(averageValueThresholds).range(['rgb(244, 210, 180)', 'rgb(209, 169, 144)',
+//         'rgb(176, 155, 112)', 'rgb(116, 146, 111)', 'rgb(50, 115, 154)', 'rgb(42, 98, 143)', 'rgb(34, 82, 132)', "#1A4177", "#11316A", "#091F5A", "#031047","#031047", "#031047", "#031047"]),
+// }
+var color = d3.scaleLinear()
+    .domain([1, 40, 80])
+    .range(['#d73027', '#fee08b', '#1a9850'])
+    .interpolate(d3.interpolateHcl); //interpolateHsl interpolateHcl interpolateRgb
+
+
+// Hexbin generator
 var hexbin = d3.hexbin().radius(30);
 
 	// Axes
@@ -58,7 +66,7 @@ g.append("clipPath")
 	.append("rect")
 	.attr("width", width)
 	.attr("height", height);
-
+obj = {};
 	// Hexagons
 g.append("g")
 		.attr("clip-path", "url(#myClip)")
@@ -68,8 +76,11 @@ g.append("g")
 		.enter()
 		.append("path")
 		.attr("d", hexbin.hexagon())	// return path string with the specified radius 
-		.attr("transform", function(d) {return "translate(" + d.x + "," + d.y + ")"})    // slide hexagon to the right position
-		.attr("fill", function(d) {return color(d.length)});	// color with corresponding color
+		.attr("transform", function(d) {
+		    return "translate(" + d.x + "," + d.y + ")"})    // slide hexagon to the right position
+		.attr("fill", function(d) {
+		    obj[d.length] = 1;
+		    return color(d.length)});	// color with corresponding color
 
 </script>
 </body>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Interpolation methods in d3.js</title>
+
+
+    <script type="text/javascript" src="https://d3js.org/d3.v3.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style>
+
+        .axis path,     /* long line, apply with same rules as line */
+        .axis line      /* tick */
+        {
+            fill: none;
+            stroke: black;
+            stroke-width: 1px;
+            shape-rendering: auto;
+        }
+
+        .axis text {
+            fill: #262721;
+            font-family: sans-serif;
+            font-size: 13px;
+        }
+        div.tooltip {
+            position: absolute;
+            text-align: center;
+            width: 70px;
+            height: 30px;
+            padding: 2px;
+            padding-top: 10px;
+            font: 16px sans-serif;
+            background: #efefef;
+            border: 0px;
+            border-radius: 8px;
+            pointer-events: none;
+            align-items: center;
+        }
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        g.group0 circle {
+            fill: red;
+        }
+
+        g.group1 circle {
+            fill: blue;
+        }
+
+        g.group2 circle {
+            fill: orange;
+        }
+
+        g.group3 circle {
+            fill: purple;
+        }
+
+        g.group4 circle {
+            fill: aqua;
+        }
+
+        g.group5 circle {
+            fill: brown;
+        }
+
+        g.group6 circle {
+            fill: green;
+        }
+
+        g.group7 circle {
+            fill: darksalmon;
+        }
+
+        g.group8 circle {
+            fill: fuchsia;
+        }
+
+        g.group9 circle {
+            fill: gold;
+        }
+
+        g.group10 circle {
+            fill: greenyellow;
+        }
+
+
+
+
+
+    </style>
+
+
+
+</head>
+
+<body>
+<script type="text/javascript">
+    var color = d3.scale.category10();
+    function getColor(category) {
+        if (category=="person")
+            return color(0) ; // leaf node
+        else if (category=="location")
+            return color(1) ; // leaf node
+        else if (category=="organization")
+            return color(2) ; // leaf node
+        else if (category=="miscellaneous")
+            return color(3) ; // leaf node
+        else
+            return "#000000";
+
+    }
+    var dataArray = [{x:5, y:5, topic: 1},
+        {x:10, y:15, topic: 1},
+        {x:20, y:7, topic: 1},
+        {x:30, y:18, topic: 1},
+        {x:40, y:10, topic: 1},
+        // {x:20, y:25, topic: 2},
+        // {x:30, y:37, topic: 2},
+        // {x:40, y:38, topic: 2},
+        // {x:50, y:50, topic: 2}
+        ];
+
+
+    var svg = d3.select("body").append("svg").attr("height","200").attr("width","300");
+
+    var interpolateTypes = ['linear'];
+
+    // line function
+    var line0 = d3.svg.line()
+        .x(function(d) { return  (d.x * 5); })
+        .y(function(d) { return  baselineY - (d.y * 5); })
+        .interpolate(interpolateTypes[0]);
+
+    var line = d3.svg.line()
+        .x(d => d.x)
+        .y(d => d.y)
+        .interpolate(interpolateTypes[0]);
+    var baselineY = 100;
+
+    p = 0;
+        var group = svg.append("g").attr("class","group"+p);
+
+        group.selectAll("circle.dots"+p)
+            .data(dataArray)
+            .enter()
+            .append("circle")
+            .attr("class","dots"+p)
+            .attr("cx", function(d,i) { return (d.x * 5) ; } )
+            .attr("cy", function(d,i) { return baselineY - (d.y * 5); } )
+            .attr("r", 5);
+
+        group.append("path")
+            .style("fill","none")
+            .style("stroke","black")
+            .style("stroke-width","4px")
+            .attr("d", line0(dataArray));
+
+
+    d3.json("data/HuffMonths.json", function(error, data) {
+        if (error) throw error;
+        console.log(data);
+
+        var categories = ["person","location","organization","miscellaneous"];
+        var width = 700,
+            height = 700,
+            padding = 50;
+
+        var topwords = 50;
+        var dataset = [];
+
+        data.forEach((month, i) => {
+            categories.forEach((topic,j) => {
+                for (let k = 0; k < topwords; k++){
+                    var word = month["words"][topic][k];
+                    dataset.push({
+                        id: word.id,
+                        word: word.text,
+                        sudden: word.sudden,
+                        frequency: word.frequency,
+                        topic: word.topic,
+                    })
+                }
+            })
+        });
+
+        var uniqueWords = {};
+        categories.forEach((d,i) => {
+            uniqueWords[d] = {};
+        });
+
+        dataset.forEach((month, i) => {
+            categories.forEach((topic, j) => {
+                month["words"][topic].forEach((word, k) => {
+                    uniqueWords[topic][word.text] = 1;
+                })
+            })
+        });
+        console.log(dataset);
+
+        var div = d3.select("body").append("div")
+            .attr("class", "tooltip")
+            .style("opacity", 0);
+
+
+        // svg
+        var svg = d3.select("body").append("svg")
+            .attr({
+                width: width,
+                height: height
+            });
+
+        var connection = svg.append("g").append("path");
+
+        // Configure scale
+        // x: freq
+        var xScale = d3.scale.linear()
+            .domain([0,d3.max(dataset, d => d["frequency"])])
+            .range([padding, width - padding]);
+
+        var yScale = d3.scale.linear()
+            .domain([0,d3.max(dataset, d => d["sudden"])])
+            .range([height - padding, padding]);
+
+        var rScale = d3.scale.linear()
+            .domain([0, d3.max(dataset, d => d["frequency"])])
+            .range([2,6]);
+
+        // Configure axis
+        var xAxis = d3.svg.axis()
+            .scale(xScale)
+            .orient("bottom")
+            .ticks(5);
+
+        var yAxis = d3.svg.axis()
+            .scale(yScale)
+            .orient("left")
+            .ticks(5);
+
+        // Clip path, as a rect
+        svg.append("clipPath")
+            .attr("id","clip")
+            .append("rect")
+            .attr({
+                width: width - padding * 2,
+                height: height - padding * 2,
+                x: padding,
+                y: padding
+            });
+
+        // Draw: Put circle inside clip path
+        // svg first appends a group, add atrribute clip-path to that group
+        // then selectAll("circle") as usual
+
+
+        svg.append("g")
+        // .attr("clip-path","url(#clip)")
+            .selectAll("circle")
+            .data(dataset)
+            .enter()
+            .append("circle")
+            .attr({
+                cx: d => xScale(d["frequency"]),
+                cy: d => yScale(d["sudden"]),
+                r: d => rScale(d["frequency"]),
+                "fill": d => getColor(d["topic"]),
+                "class": d => d["word"].split(" ").join("").split(".").join(""),
+                "id": d => d["word"]
+            })
+            .on("mouseover", function (d) {
+                div.transition()
+                    .duration(200)
+                    .style("opacity", .9)
+                    .style("color", getColor(d["topic"]))
+                    .style("width", (d["word"].length * 10) + "px");
+                div.html(d.word)
+                    .style("left", (d3.event.pageX) + "px")
+                    .style("top", (d3.event.pageY - 28) + "px");
+
+                var arr = [];
+                d3.selectAll("." + $(this).attr("class"))[0].forEach((d,i) => {
+                    arr.push({
+                        "id": "path_" + d.getAttribute("class"),
+                        x: d.getAttribute("cx"),
+                        y: d.getAttribute("cy")
+                    })
+                });
+
+                connection.transition()
+                    .duration(200)
+                    .style("opacity", .9)
+                    .style("fill","none")
+                    .style("stroke","black")
+                    .style("stroke-width","2px")
+                    .attr("id", $(this).attr("class"))
+                    .attr("d", line(arr));
+
+            })
+            .on("mouseout", function (d) {
+                div.transition()
+                    .duration(500)
+                    .style("opacity",0);
+
+                connection.transition()
+                    .duration(500)
+                    .style("opacity",0);
+            })
+        ;
+
+        svg.append("g")
+            .attr({
+                "class": "x axis",
+                "transform": "translate(0," + (height-padding) + ")"
+            })
+            .call(xAxis);
+
+        svg.append("g")
+            .attr({
+                "class": "y axis",
+                "transform": "translate(" + padding + ",0)"
+            })
+            .call(yAxis);
+
+        svg.append("text")
+            .attr("transform",
+                "translate(" + (width/2) + " ," +
+                (height-10) + ")")
+            .style("text-anchor", "middle")
+            .text("Frequency")
+            .attr("font-size", "20px");
+
+        svg.append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("y", 0)
+            .attr("x",0 - (height / 2))
+            .attr("dy", "1em")
+            .style("text-anchor", "middle")
+            .text("Sudden attention")
+            .attr("font-size", "20px");
+
+
+    });
+</script>
+</body>
+
+</html>

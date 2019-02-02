@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scroller</title>
+    <style>
+        .container{
+            float:left;
+            height: 250px;
+            width:250px;
+            padding:3px;
+            background: #898a7d;
+        }
+        .content{
+            height:224px;
+            overflow:auto;
+            background:#FFFFFF;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="content" id="vis">
+    </div>
+</div>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script>
+    var width = 300, height = 500;
+    var svg = d3.select("#vis").append("svg").attr({
+        width: width,
+        height: height
+    })
+
+    var data = [10, 15, 20, 25, 30, 35, 40, 45, 1, 2 , 4, 5, 6,7,7];
+
+    svg.selectAll("rect")
+    .data(data)
+    .enter()
+    .append("rect")
+    .attr({
+        x: 50,
+        y: (d,i) => {return 25*(i+1)},
+        width: 25,
+        height: 25,
+        "fill": (d,i) => {
+            if (i%2 === 0) return "yellow";
+            else return "green"
+        }
+    });
+
+    svg.selectAll("text")
+        .data(data)
+        .enter()
+        .append("text")
+        .text(d => d)
+        .attr({
+            x: 55,
+            y: (d,i) => {return 25*(i+1)+20},
+
+        })
+
+</script>
+</body>
+</html>

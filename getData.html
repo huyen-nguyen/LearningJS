@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Huff</title>
+    <script src="lib/d3.min.js"></script>
+    <style>
+        .axis path,     /* long line, apply with same rules as line */
+        .axis line      /* tick */
+        {
+            fill: none;
+            stroke: black;
+            stroke-width: 1px;
+            shape-rendering: auto;
+        }
+
+        .axis text {
+            fill: #262721;
+            font-family: sans-serif;
+            font-size: 13px;
+        }
+        div.tooltip {
+            position: absolute;
+            text-align: center;
+            width: 70px;
+            height: 30px;
+            padding: 2px;
+            padding-top: 10px;
+            font: 16px sans-serif;
+            background: #efefef;
+            border: 0px;
+            border-radius: 8px;
+            pointer-events: none;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+<script>
+    var color = d3.scale.category10();
+    function getColor(category) {
+        if (category=="person")
+            return color(0) ; // leaf node
+        else if (category=="location")
+            return color(1) ; // leaf node
+        else if (category=="organization")
+            return color(2) ; // leaf node
+        else if (category=="miscellaneous")
+            return color(3) ; // leaf node
+        else
+            return "#000000";
+
+    }
+    function getHigh(d){
+        return  (35 * (d.split(" ").length-1)) + "px";
+    }
+    d3.json("data/HuffMonths.json", function(error, data) {
+        if (error) throw error;
+        console.log(data);
+
+        var categories = ["person","location","organization","miscellaneous"];
+        var width = 700,
+            height = 700,
+            padding = 50;
+
+        var topwords = 50;
+        var dataset = [];
+
+        data.forEach((month, i) => {
+            categories.forEach((topic,j) => {
+                for (let k = 0; k < topwords; k++){
+                    var word = month["words"][topic][k];
+                    dataset.push({
+                        id: word.id,
+                        word: word.text,
+                        sudden: word.sudden,
+                        frequency: word.frequency,
+                        topic: word.topic,
+                    })
+                }
+            })
+        });
+
+        console.log(dataset);
+
+        var div = d3.select("body").append("div")
+            .attr("class", "tooltip")
+            .style("opacity", 0);
+
+        // svg
+        var svg = d3.select("body").append("svg")
+            .attr({
+                width: width,
+                height: height
+            });
+
+        // Configure scale
+        // x: freq
+        var xScale = d3.scale.linear()
+            .domain([0,d3.max(dataset, d => d["frequency"])])
+            .range([padding, width - padding]);
+
+        var yScale = d3.scale.linear()
+            .domain([0,d3.max(dataset, d => d["sudden"])])
+            .range([height - padding, padding]);
+
+        var rScale = d3.scale.linear()
+            .domain([0, d3.max(dataset, d => d["frequency"])])
+            .range([2,6]);
+
+        // Configure axis
+        var xAxis = d3.svg.axis()
+            .scale(xScale)
+            .orient("bottom")
+            .ticks(5);
+
+        var yAxis = d3.svg.axis()
+            .scale(yScale)
+            .orient("left")
+            .ticks(5);
+
+        // Clip path, as a rect
+        svg.append("clipPath")
+            .attr("id","clip")
+            .append("rect")
+            .attr({
+                width: width - padding * 2,
+                height: height - padding * 2,
+                x: padding,
+                y: padding
+            });
+
+        // Draw: Put circle inside clip path
+        // svg first appends a group, add atrribute clip-path to that group
+        // then selectAll("circle") as usual
+
+        svg.append("g")
+            // .attr("clip-path","url(#clip)")
+            .selectAll("circle")
+            .data(dataset)
+            .enter()
+            .append("circle")
+            .attr({
+                cx: d => xScale(d["frequency"]),
+                cy: d => yScale(d["sudden"]),
+                r: d => rScale(d["frequency"]),
+                "fill": d => getColor(d["topic"])
+            })
+            .on("mouseover", function (d) {
+                div.transition()
+                    .duration(200)
+                    .style("opacity", .9)
+                    .style("color", getColor(d["topic"]))
+                    .style("width", (d["word"].length * 10) + "px");
+                div.html(d.word)
+                    .style("left", (d3.event.pageX) + "px")
+                    .style("top", (d3.event.pageY - 28) + "px");
+            })
+            .on("mouseout", function (d) {
+                div.transition()
+                    .duration(500)
+                    .style("opacity",0)
+            })
+        ;
+
+        svg.append("g")
+            .attr({
+                "class": "x axis",
+                "transform": "translate(0," + (height-padding) + ")"
+            })
+            .call(xAxis);
+
+        svg.append("g")
+            .attr({
+                "class": "y axis",
+                "transform": "translate(" + padding + ",0)"
+            })
+            .call(yAxis);
+
+        svg.append("text")
+            .attr("transform",
+                "translate(" + (width/2) + " ," +
+                (height-10) + ")")
+            .style("text-anchor", "middle")
+            .text("Frequency")
+            .attr("font-size", "20px");
+
+        svg.append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("y", 0)
+            .attr("x",0 - (height / 2))
+            .attr("dy", "1em")
+            .style("text-anchor", "middle")
+            .text("Sudden attention")
+            .attr("font-size", "20px");
+
+
+    });
+</script>
+</body>
+</html>
