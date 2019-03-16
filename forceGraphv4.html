@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Force directed graph v4</title>
+    <style>
+        .link line{
+            stroke: black;
+            stroke-opacity: 0.6;
+        }
+
+        .node circle{
+            stroke: #b3ddf2;
+            stroke-width: 1.5px;
+        }
+    </style>
+</head>
+<body>
+<script src="lib/d3.v4.min.js"></script>
+<script>
+    var width = 960;
+    var height = 600;
+    var svg = d3.select("body").append("svg")
+                                        .attr("width", width)
+                                        .attr("height", height);
+    var nodes_data =  [
+        {"name": "Travis", "sex": "M"},
+        {"name": "Rake", "sex": "M"},
+        {"name": "Diana", "sex": "F"},
+        {"name": "Rachel", "sex": "F"},
+        {"name": "Shawn", "sex": "M"},
+        {"name": "Emerald", "sex": "F"}
+    ];
+
+    var links_data = [
+        {"source": "Travis", "target": "Rake"},
+        {"source": "Diana", "target": "Rake"},
+        {"source": "Diana", "target": "Rachel"},
+        {"source": "Rachel", "target": "Rake"},
+        {"source": "Rachel", "target": "Shawn"},
+        {"source": "Emerald", "target": "Rachel"}
+    ]
+
+    var link_force = d3.forceLink(links_data).id(d => d.name);
+
+    var simulation = d3.forceSimulation()
+        .nodes(nodes_data);
+
+    simulation.force("chargeForce", d3.forceManyBody())
+        .force("centerForce", d3.forceCenter(width/2, height/2));
+
+    simulation.force("link", link_force);
+    simulation.on("tick", tick);
+
+    // no location
+    var link = svg.append("g")
+        .attr("class", "link")
+        .selectAll("line")
+        .data(links_data)
+        .enter()
+        .append("line")
+        .attr("stroke-width", 2);
+    
+    // no location
+    var node = svg.append("g")
+    .attr("class", "node")
+    .selectAll("circle")
+    .data(nodes_data)
+    .enter()
+    .append("circle")
+    .attr("r", 5)
+    .attr("fill", "green");
+
+    function tick() {
+        // update position to reflect *updates* on each tick of the simulation
+        node.attr("cx", d => d.x)
+            .attr("cy", d => d.y)
+
+        link.attr("x1", function(d) { return d.source.x; })
+            .attr("y1", function(d) { return d.source.y; })
+            .attr("x2", function(d) { return d.target.x; })
+            .attr("y2", function(d) { return d.target.y; });
+
+    }
+
+</script>
+</body>
+</html>
