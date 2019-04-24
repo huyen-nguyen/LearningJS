@@ -5,83 +5,119 @@
     <title>Force directed graph v4</title>
     <style>
         .link line{
-            stroke: black;
             stroke-opacity: 0.6;
         }
 
         .node circle{
-            stroke: #b3ddf2;
+            stroke: #e2e2e2;
             stroke-width: 1.5px;
         }
     </style>
 </head>
 <body>
+<!--http://www.puzzlr.org/force-graphs-with-d3/-->
 <script src="lib/d3.v4.min.js"></script>
 <script>
-    var width = 960;
-    var height = 600;
+    var width = 400;
+    var height = 400;
     var svg = d3.select("body").append("svg")
                                         .attr("width", width)
-                                        .attr("height", height);
+                                        .attr("height", height)
+    ;
     var nodes_data =  [
-        {"name": "Travis", "sex": "M"},
-        {"name": "Rake", "sex": "M"},
-        {"name": "Diana", "sex": "F"},
-        {"name": "Rachel", "sex": "F"},
-        {"name": "Shawn", "sex": "M"},
-        {"name": "Emerald", "sex": "F"}
+        {"name": "Lillian", "sex": "F"},
+        {"name": "Gordon", "sex": "M"},
+        {"name": "Sylvester", "sex": "M"},
+        {"name": "Mary", "sex": "F"},
+        {"name": "Helen", "sex": "F"},
+        {"name": "Jamie", "sex": "M"},
+        {"name": "Jessie", "sex": "F"},
+        {"name": "Ashton", "sex": "M"},
+        {"name": "Duncan", "sex": "M"},
+        {"name": "Evette", "sex": "F"},
+        {"name": "Mauer", "sex": "M"},
+        {"name": "Fray", "sex": "F"},
+        {"name": "Duke", "sex": "M"},
+        {"name": "Baron", "sex": "M"},
+        {"name": "Infante", "sex": "M"},
+        {"name": "Percy", "sex": "M"},
+        {"name": "Cynthia", "sex": "F"}
     ];
 
-    var links_data = [
-        {"source": "Travis", "target": "Rake"},
-        {"source": "Diana", "target": "Rake"},
-        {"source": "Diana", "target": "Rachel"},
-        {"source": "Rachel", "target": "Rake"},
-        {"source": "Rachel", "target": "Shawn"},
-        {"source": "Emerald", "target": "Rachel"}
-    ]
+    var links_data = links_data = [
+        {"source": "Sylvester", "target": "Gordon", "type":"A"},
+        {"source": "Sylvester", "target": "Lillian", "type":"A" },
+        {"source": "Sylvester", "target": "Mary", "type":"A"},
+        {"source": "Sylvester", "target": "Jamie", "type":"A"},
+        {"source": "Sylvester", "target": "Jessie", "type":"A"},
+        {"source": "Sylvester", "target": "Helen", "type":"A"},
+        {"source": "Helen", "target": "Gordon", "type":"A"},
+        {"source": "Mary", "target": "Lillian", "type":"A"},
+        {"source": "Ashton", "target": "Mary", "type":"A"},
+        {"source": "Duncan", "target": "Jamie", "type":"A"},
+        {"source": "Gordon", "target": "Jessie", "type":"A"},
+        {"source": "Sylvester", "target": "Fray", "type":"E"},
+        {"source": "Fray", "target": "Mauer", "type":"A"},
+        {"source": "Fray", "target": "Cynthia", "type":"A"},
+        {"source": "Fray", "target": "Percy", "type":"A"},
+        {"source": "Percy", "target": "Cynthia", "type":"A"},
+        {"source": "Infante", "target": "Duke", "type":"A"},
+        {"source": "Duke", "target": "Gordon", "type":"A"},
+        {"source": "Duke", "target": "Sylvester", "type":"A"},
+        {"source": "Baron", "target": "Duke", "type":"A"},
+        {"source": "Baron", "target": "Sylvester", "type":"E"},
+        {"source": "Evette", "target": "Sylvester", "type":"E"},
+        {"source": "Cynthia", "target": "Sylvester", "type":"E"},
+        {"source": "Cynthia", "target": "Jamie", "type":"E"},
+        {"source": "Mauer", "target": "Jessie", "type":"E"}
+    ];
 
-    var link_force = d3.forceLink(links_data).id(d => d.name);
-
+    // define simulation
     var simulation = d3.forceSimulation()
-        .nodes(nodes_data);
-
-    simulation.force("chargeForce", d3.forceManyBody())
-        .force("centerForce", d3.forceCenter(width/2, height/2));
-
-    simulation.force("link", link_force);
-    simulation.on("tick", tick);
+        .force("link", d3.forceLink().id(function(d) { return d.name; }))
+        .force("charge", d3.forceManyBody())
+        .force("center", d3.forceCenter(width / 2, height / 2))
+        .on("tick", tick);
 
     // no location
-    var link = svg.append("g")
+    var links = svg.append("g")
         .attr("class", "link")
         .selectAll("line")
         .data(links_data)
         .enter()
         .append("line")
-        .attr("stroke-width", 2);
-    
+        .attr("stroke-width", 2)
+        // .attr("opacity", 0)
+        .attr("stroke", d => d.type === "A"? "green" : "red");
+
     // no location
-    var node = svg.append("g")
-    .attr("class", "node")
-    .selectAll("circle")
-    .data(nodes_data)
-    .enter()
-    .append("circle")
-    .attr("r", 5)
-    .attr("fill", "green");
+    var nodes = svg.append("g")
+        .attr("class", "node")
+        .selectAll("circle")
+        .data(nodes_data)
+        .enter()
+        .append("circle")
+        .attr("fill", d => d.sex === "M" ? "steelblue" : "pink")
+        .attr("r", 6)
+    ;
 
-    function tick() {
-        // update position to reflect *updates* on each tick of the simulation
-        node.attr("cx", d => d.x)
-            .attr("cy", d => d.y)
+    simulation.nodes(nodes_data);
 
-        link.attr("x1", function(d) { return d.source.x; })
-            .attr("y1", function(d) { return d.source.y; })
-            .attr("x2", function(d) { return d.target.x; })
-            .attr("y2", function(d) { return d.target.y; });
+    simulation.force("link")
+        .links(links_data);
+
+    function tick(){
+        // at this moment nodes_data already has x and y for each point
+        links.attr("x1", d => d.source.x)
+            .attr("y1", d => d.source.y)
+            .attr("x2", d => d.target.x)
+            .attr("y2", d => d.target.y);
+
+        nodes.attr("cx", d => d.x)
+            .attr("cy", d => d.y);
 
     }
+
 
 </script>
 </body>
