@@ -118,7 +118,12 @@
                 return "M" + d[0].x + "," + d[0].y
                     + "L" + d[1].x + "," + d[1].y;
             }
-
+            // let x1 = d.source.x,
+            //     y1 = d.source.y,
+            //     x2 = d.target.x,
+            //     y2 = d.target.y;
+            //
+            // return "M" + x1 + "," + y1 + "L" + x2 + "," + y2;
         }
 
         function positionNode(d) {
@@ -127,7 +132,7 @@
 
         function dragstarted(d) {
             if (!d3.event.active) simulation.alphaTarget(0.3).restart();
-            d.fx = d.x, d.fy = d.y;
+            d.fx = d.x; d.fy = d.y;
         }
 
         function dragged(d) {

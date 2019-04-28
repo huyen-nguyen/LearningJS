@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14c1f270-d70f-4e0c-8543-075465f9e7c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CurvedLinks.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/groupNodesv2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/self-link.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/streamgraph.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testCurve.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ConvexHullv4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/v2groupNodes.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forceGraphv4.html" beforeDir="false" afterPath="$PROJECT_DIR$/forceGraphv4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CurvedLinks.html" beforeDir="false" afterPath="$PROJECT_DIR$/CurvedLinks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groupNodesv2.html" beforeDir="false" afterPath="$PROJECT_DIR$/groupNodes.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -40,30 +38,30 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="34" />
-          <entry key="js" value="5" />
-          <entry key="json" value="5" />
+          <entry key="html" value="43" />
+          <entry key="js" value="6" />
+          <entry key="json" value="7" />
           <entry key="tsv" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="34" />
-          <entry key="JSON" value="4" />
-          <entry key="JavaScript" value="5" />
+          <entry key="HTML" value="43" />
+          <entry key="JSON" value="6" />
+          <entry key="JavaScript" value="6" />
           <entry key="TSV" value="1" />
           <entry key="tsconfig" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="15460" />
+          <entry key="html" value="16466" />
           <entry key="json" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="15460" />
+          <entry key="HTML" value="16466" />
           <entry key="JSON" value="3" />
         </counts>
       </usages-collector>
@@ -71,44 +69,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/alphabet.html">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/groupNodes.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="752">
-              <caret line="105" column="35" selection-start-line="105" selection-start-column="35" selection-end-line="105" selection-end-column="35" />
+            <state relative-caret-position="450">
+              <caret line="174" column="8" selection-start-line="174" selection-start-column="8" selection-end-line="174" selection-end-column="8" />
+              <folding>
+                <element signature="e#4698#5352#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Stream.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="744">
-              <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
-            </state>
-          </provider>
+        <entry file="mock://chrome-extension://gighmmpiobklfepjocnamgkkbiglidom/adblock-functions.js">
+          <provider selected="true" editor-type-id="vmFileEditor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/miserables.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-24" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CurvedLinks.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="798">
-              <caret line="48" column="36" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="36" />
-            </state>
+            <state relative-caret-position="-569" />
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/miserablesO.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
+            <state relative-caret-position="4536">
               <caret line="189" column="58" selection-start-line="189" selection-start-column="58" selection-end-line="189" selection-end-column="58" />
             </state>
           </provider>
@@ -137,6 +125,7 @@
       <find>data(</find>
       <find>json</find>
       <find>gri</find>
+      <find>mise</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -145,8 +134,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/javascripts/fisheye.js" />
-        <option value="$PROJECT_DIR$/fisheyeGrid.html" />
         <option value="$PROJECT_DIR$/Chart.html" />
         <option value="$PROJECT_DIR$/javascripts/Trans.js" />
         <option value="$PROJECT_DIR$/javascripts/trans.js" />
@@ -190,12 +177,14 @@
         <option value="$PROJECT_DIR$/forceGraphv4.html" />
         <option value="$PROJECT_DIR$/streamgraph.html" />
         <option value="$PROJECT_DIR$/sideNavigation.html" />
-        <option value="$PROJECT_DIR$/groupNodes.html" />
-        <option value="$PROJECT_DIR$/groupNodesv2.html" />
         <option value="$PROJECT_DIR$/self-link.html" />
         <option value="$PROJECT_DIR$/data/miserablesO.json" />
         <option value="$PROJECT_DIR$/testCurve.html" />
         <option value="$PROJECT_DIR$/CurvedLinks.html" />
+        <option value="$PROJECT_DIR$/groupNodesv2.html" />
+        <option value="$PROJECT_DIR$/v2groupNodes.html" />
+        <option value="$PROJECT_DIR$/ConvexHullv4.html" />
+        <option value="$PROJECT_DIR$/groupNodes.html" />
       </list>
     </option>
   </component>
@@ -205,10 +194,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1219" />
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="y" value="23" />
-    <option name="width" value="1150" />
+    <option name="width" value="1192" />
     <option name="height" value="1417" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -303,36 +291,36 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.CurvedLinks.html">
-    <configuration name="CurvedLinks.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/LearningJS/CurvedLinks.html">
+  <component name="RunManager">
+    <configuration name="ConvexHullv4.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/LearningJS/ConvexHullv4.html">
       <method v="2" />
     </configuration>
-    <configuration name="alphabet.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/LearningJS/alphabet.html">
+    <configuration name="CurvedLinks.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/LearningJS/CurvedLinks.html">
       <method v="2" />
     </configuration>
     <configuration name="forceGraphv4.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/LearningJS/forceGraphv4.html">
       <method v="2" />
     </configuration>
-    <configuration name="hexagonal-binning.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/LearningJS/hexagonal-binning.html">
+    <configuration name="groupNodes.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/LearningJS/groupNodes.html">
       <method v="2" />
     </configuration>
     <configuration name="streamgraph.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/LearningJS/streamgraph.html">
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JavaScript Debug.alphabet.html" />
-      <item itemvalue="JavaScript Debug.hexagonal-binning.html" />
       <item itemvalue="JavaScript Debug.forceGraphv4.html" />
       <item itemvalue="JavaScript Debug.streamgraph.html" />
       <item itemvalue="JavaScript Debug.CurvedLinks.html" />
+      <item itemvalue="JavaScript Debug.groupNodes.html" />
+      <item itemvalue="JavaScript Debug.ConvexHullv4.html" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.groupNodes.html" />
+        <item itemvalue="JavaScript Debug.ConvexHullv4.html" />
         <item itemvalue="JavaScript Debug.CurvedLinks.html" />
         <item itemvalue="JavaScript Debug.streamgraph.html" />
         <item itemvalue="JavaScript Debug.forceGraphv4.html" />
-        <item itemvalue="JavaScript Debug.hexagonal-binning.html" />
-        <item itemvalue="JavaScript Debug.alphabet.html" />
       </list>
     </recent_temporary>
   </component>
@@ -380,24 +368,24 @@
       <workItem from="1552930776938" duration="609000" />
       <workItem from="1553014434682" duration="2133000" />
       <workItem from="1553972920131" duration="790000" />
-      <workItem from="1556044422010" duration="15773000" />
+      <workItem from="1556044422010" duration="51850000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="235825000" />
+    <option name="totallyTimeSpent" value="271902000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1219" y="23" width="1150" height="1417" extended-state="0" />
+    <frame x="0" y="23" width="1192" height="1417" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19486271" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21776259" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32925898" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.32849503" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.23529412" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -421,9 +409,15 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/CurvedLinks.html</url>
-          <line>142</line>
+          <line>147</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/groupNodes.html</url>
+          <line>174</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="39" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -438,27 +432,6 @@
     <select />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/allslider.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/slider.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3384">
-          <caret line="141" column="29" selection-start-line="141" selection-start-column="29" selection-end-line="141" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/span.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/circle.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2016">
@@ -716,13 +689,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/groupNodesv2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="599">
-          <caret line="33" column="6" lean-forward="true" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/forceGraphv4.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1196">
@@ -737,32 +703,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Stream.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="744">
-          <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/miserables.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-24" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/miserablesO.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="189" column="58" selection-start-line="189" selection-start-column="58" selection-end-line="189" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/alphabet.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="752">
-          <caret line="105" column="35" selection-start-line="105" selection-start-column="35" selection-end-line="105" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testCurve.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="562">
@@ -772,8 +712,61 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CurvedLinks.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="48" column="36" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="36" />
+        <state relative-caret-position="812">
+          <caret line="62" column="29" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Convexhull.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alphabet.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="752">
+          <caret line="105" column="35" selection-start-line="105" selection-start-column="35" selection-end-line="105" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Stream.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="744">
+          <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ConvexHullv4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="102" column="37" lean-forward="true" selection-start-line="102" selection-start-column="23" selection-end-line="102" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/miserables.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-569" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/miserablesO.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4536">
+          <caret line="189" column="58" selection-start-line="189" selection-start-column="58" selection-end-line="189" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v2groupNodes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-213">
+          <caret line="199" lean-forward="true" selection-start-line="199" selection-end-line="199" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/groupNodes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="174" column="8" selection-start-line="174" selection-start-column="8" selection-end-line="174" selection-end-column="8" />
+          <folding>
+            <element signature="e#4698#5352#0" />
+          </folding>
         </state>
       </provider>
     </entry>
