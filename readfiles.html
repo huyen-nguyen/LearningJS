@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://d3js.org/d3.v4.js"></script>
+</head>
+<body>
+<input type="file" id="input" onchange="handleFiles">
+<script>
+    const inputElement = document.getElementById("input");
+    inputElement.addEventListener("change", handleFiles, false);
+    function handleFiles() {
+        const fileList = this.files; /* now you can work with the file list */
+        var file = fileList[0];
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            // The file's text will be printed here
+            console.log(d3.csvParse(e.target.result));
+        };
+        reader.readAsText(file);
+    }
+</script>
+</body>
+</html>

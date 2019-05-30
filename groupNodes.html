@@ -82,7 +82,10 @@
         for (var k=0; k<data.nodes.length; ++k) {
             var n = data.nodes[k],
                 i = getGroup(n),
-                g = groupMap[i] || (groupMap[i]=prevGroupNode[i]) || (groupMap[i]={group:i, size:0, nodes:[]});
+                g = groupMap[i]
+                    || (groupMap[i]=prevGroupNode[i])
+                    || (groupMap[i]={group:i, size:0, nodes:[]});
+            console.log(i);
             if (expand[i]) {
                 // the node should be directly visible
                 nodeMap[n.name] = nodes.length;
@@ -105,11 +108,13 @@
                 }
                 g.nodes.push(n);
             }
-            // always count group size as we also use it to tweak the force graph strengths/distances
+            // always count group size as we also use it to
+            // tweak the force graph strengths/distances
             g.size += 1;
             n.group_data = g;
         }
         for (i in groupMap) { groupMap[i].link_count = 0; }
+        console.log(groupMap)
         // determine links
         for (k=0; k<data.links.length; ++k) {
             var e = data.links[k],
@@ -199,8 +204,7 @@
                 .strength(1)
             )
             .force("center", d3.forceCenter(width/2, height/2))
-            .force("xAxis",d3.forceX(width/2).strength(0.15))
-            .force("yAxis",d3.forceY(height/2).strength(0.15))
+
             .force("charge", d3.forceManyBody()
                 .strength(-600)
             )
