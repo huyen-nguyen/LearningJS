@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Streamgraph</title>
+<style>
+
+    body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        margin: auto;
+        position: relative;
+        width: 960px;
+    }
+
+    button {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+
+</style>
+<button onclick="transition()">Update</button>
+<script src="//d3js.org/d3.v4.min.js"></script>
+<script>
+
+    var n = 20, // number of layers
+        m = 200, // number of samples per layer
+        stack = d3.stack()
+            .keys(d3.range(n).map(function (d) { return "layer"+d; }))
+            .offset(d3.stackOffsetWiggle);
+
+    // Create empty data structures
+    var matrix0 = d3.range(m).map(function (d) { return { x:d }; });
+    var matrix1 = d3.range(m).map(function (d) { return { x:d }; });
+
+    // Fill them with random data
+    d3.range(n).map(function(d) { bumpLayer(m, matrix0, d); });
+    d3.range(n).map(function(d) { bumpLayer(m, matrix1, d); });
+
+    var layers0 = stack(matrix0),
+        layers1 = stack(matrix1);
+
+    console.log(layers0);
+    var width = 960,
+        height = 500;
+
+    var x = d3.scaleLinear()
+        .domain([0, m - 1])
+        .range([0, width]);
+
+    var y = d3.scaleLinear()
+        .domain([d3.min(layers0.concat(layers1), function(layer) { return d3.min(layer, function(d) { return d[0]; }); }), d3.max(layers0.concat(layers1), function(layer) { return d3.max(layer, function(d) { return d[1]; }); })])
+        .range([height, 0]);
+
+    var color = d3.scaleLinear()
+        .range(["#aad", "#556"]);
+
+    var area = d3.area()
+        .x(function(d,i) { return x(d.data.x); })
+        .y0(function(d) { return y(d[0]); })
+        .y1(function(d) { return y(d[1]); });
+
+    var svg = d3.select("body").append("svg")
+        .attr("width", width)
+        .attr("height", height);
+
+    svg.selectAll("path")
+        .data(layers0)
+        .enter().append("path")
+        .attr("d", area)
+        .style("fill", function() { return color(Math.random()); });
+
+    function transition() {
+        d3.selectAll("path")
+            .data(function() {
+                var d = layers1;
+                layers1 = layers0;
+                return layers0 = d;
+            })
+            .transition()
+            .duration(2500)
+            .attr("d", area);
+    }
+
+    // Inspired by Lee Byron's test data generator.
+    function bumpLayer(n, matrix, layer) {
+
+        function bump(a) {
+            var x = 1 / (.1 + Math.random()),
+                y = 2 * Math.random() - .5,
+                z = 10 / (.1 + Math.random());
+            for (var i = 0; i < n; i++) {
+                var w = (i / n - y) * z;
+                a[i] += x * Math.exp(-w * w);
+            }
+        }
+
+        var a = [], i;
+        var i;
+        for (i = 0; i < n; ++i) a[i] = 0;
+        for (i = 0; i < 5; ++i) bump(a);
+        return a.forEach(function(d, i) { matrix[i]["layer"+layer]=Math.max(0, d)+1; });
+    }
+
+</script>
