@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14c1f270-d70f-4e0c-8543-075465f9e7c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data/verticalTooltipData.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/streamgraphPurple.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/verticalTooltip.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crosshair.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ScatterplotUpdate.html" beforeDir="false" afterPath="$PROJECT_DIR$/ScatterplotUpdate.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stream.html" beforeDir="false" afterPath="$PROJECT_DIR$/Stream.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/XinLoi_EmMo-8893.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/XinLoi_EmMo.mp3" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,7 +20,7 @@
         <counts>
           <entry key="project.closed" value="19" />
           <entry key="project.open.time.0" value="2" />
-          <entry key="project.open.time.1" value="9" />
+          <entry key="project.open.time.1" value="10" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.15" value="1" />
@@ -38,13 +32,13 @@
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.85" value="1" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="26" />
+          <entry key="project.opened" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="csv" value="2" />
-          <entry key="html" value="50" />
+          <entry key="html" value="51" />
           <entry key="js" value="6" />
           <entry key="json" value="7" />
           <entry key="tsv" value="1" />
@@ -53,7 +47,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSV" value="2" />
-          <entry key="HTML" value="50" />
+          <entry key="HTML" value="51" />
           <entry key="JSON" value="6" />
           <entry key="JavaScript" value="6" />
           <entry key="TSV" value="1" />
@@ -62,13 +56,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="17324" />
+          <entry key="html" value="17337" />
           <entry key="json" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="17324" />
+          <entry key="HTML" value="17337" />
           <entry key="JSON" value="3" />
         </counts>
       </usages-collector>
@@ -103,11 +97,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/streamgraphPurple.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1008">
-              <caret line="42" column="21" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
+            <state relative-caret-position="288">
+              <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Crosshair.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="949">
+              <caret line="196" column="31" lean-forward="true" selection-start-line="196" selection-start-column="31" selection-end-line="196" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -153,7 +156,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/input.html" />
         <option value="$PROJECT_DIR$/javascripts/slider.js" />
         <option value="$PROJECT_DIR$/d3.slider.js" />
         <option value="$PROJECT_DIR$/D3Sider.html" />
@@ -204,6 +206,7 @@
         <option value="$PROJECT_DIR$/data/verticalTooltipData.csv" />
         <option value="$PROJECT_DIR$/verticalTooltip.html" />
         <option value="$PROJECT_DIR$/streamgraphPurple.html" />
+        <option value="$PROJECT_DIR$/Crosshair.html" />
       </list>
     </option>
   </component>
@@ -213,8 +216,8 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="79" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="y" value="23" />
     <option name="width" value="1114" />
     <option name="height" value="1417" />
   </component>
@@ -389,14 +392,15 @@
       <workItem from="1560370911792" duration="835000" />
       <workItem from="1560460849658" duration="604000" />
       <workItem from="1560527056144" duration="597000" />
+      <workItem from="1560719621545" duration="3928000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="303383000" />
+    <option name="totallyTimeSpent" value="307311000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="79" width="1114" height="1417" extended-state="0" />
+    <frame x="0" y="23" width="1114" height="1417" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21408966" />
@@ -469,13 +473,6 @@
     <select />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/d3.slider.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10104">
-          <caret line="426" column="4" selection-start-line="426" selection-start-column="4" selection-end-line="426" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/simpleSlider.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
@@ -797,8 +794,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/streamgraphPurple.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1008">
-          <caret line="42" column="21" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
+        <state relative-caret-position="288">
+          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Crosshair.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="949">
+          <caret line="196" column="31" lean-forward="true" selection-start-line="196" selection-start-column="31" selection-end-line="196" selection-end-column="31" />
         </state>
       </provider>
     </entry>
