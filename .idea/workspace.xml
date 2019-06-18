@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14c1f270-d70f-4e0c-8543-075465f9e7c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ResizableRect.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dragLine.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resizeRect.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dragLine.html" beforeDir="false" afterPath="$PROJECT_DIR$/dragLine.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -58,13 +55,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="17811" />
+          <entry key="html" value="18181" />
           <entry key="json" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="17811" />
+          <entry key="HTML" value="18181" />
           <entry key="JSON" value="3" />
         </counts>
       </usages-collector>
@@ -102,8 +99,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dragLine.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="72" column="30" lean-forward="true" selection-start-line="72" selection-start-column="30" selection-end-line="72" selection-end-column="30" />
+            <state relative-caret-position="102">
+              <caret line="64" column="33" lean-forward="true" selection-start-line="64" selection-start-column="33" selection-end-line="64" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -378,18 +375,18 @@
       <workItem from="1560460849658" duration="604000" />
       <workItem from="1560527056144" duration="597000" />
       <workItem from="1560719621545" duration="5110000" />
-      <workItem from="1560873987286" duration="4286000" />
+      <workItem from="1560873987286" duration="6130000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="312779000" />
+    <option name="totallyTimeSpent" value="314623000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="15" y="23" width="1114" height="1417" extended-state="0" />
+    <frame x="15" y="23" width="1099" height="1417" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21408966" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21706864" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -733,13 +730,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/streamgraph.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/verticalTooltip.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3768">
@@ -789,10 +779,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/streamgraph.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dragLine.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="72" column="30" lean-forward="true" selection-start-line="72" selection-start-column="30" selection-end-line="72" selection-end-column="30" />
+        <state relative-caret-position="102">
+          <caret line="64" column="33" lean-forward="true" selection-start-line="64" selection-start-column="33" selection-end-line="64" selection-end-column="33" />
         </state>
       </provider>
     </entry>

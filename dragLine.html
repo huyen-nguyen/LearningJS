@@ -19,6 +19,12 @@
         stroke: magenta;
     }
 
+    .overlay {
+        fill: none;
+        stroke: none;
+        pointer-events: all;
+    }
+
 </style>
 <body>
 <script src="//d3js.org/d3.v4.min.js"></script>
@@ -49,19 +55,31 @@
         .on('end', dragended);
 
     // Pointer to the d3 lines
-    var lines = svg
+
+    let group = svg.append("g");
+    var lines = group
         .selectAll('line')
         .data(data)
         .enter()
         .append('line')
         .style("stroke-width", 2)
         .style("stroke", "black")
-        // .style("stroke-dasharray", ("4, 2"))
-        .attr("x1", d => d.x1)
-        .attr("x2", d => d.x2)
+        .attr("x1", 0)
+        .attr("x2", 0)
         .attr("y1", d => d.y1)
-        .attr("y2", d => d.y2)
-        .call(drag);
+        .attr("y2", d => d.y2);
+
+    let groupWidth = 20;
+    group.append("rect")
+        .attr("id", "overlayDashedGroup")
+        .attr("class", "overlay")
+        .attr("width", groupWidth)
+        .attr("height", 300-15)
+        .attr("x", -groupWidth/2)
+        .attr("y", data[0].y1)
+        .attr("cursor", "ew-resize");
+
+    group.call(drag);
 
     let text = svg.append("text")
         .attr("x", 20)
@@ -80,10 +98,8 @@
     function dragged() {
         var x = d3.event.x;
         text.text(stepPosition(x));
-        var line = d3.select(this);
-        line
-            .attr("x1", stepPosition(x))
-            .attr("x2", stepPosition(x));
+        var thisGroup = d3.select(this);
+        thisGroup.attr("transform", "translate(" + stepPosition(x) + ",0)");
     }
 
     function dragended() {
