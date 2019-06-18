@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style type="text/css">
+
+    svg {
+        font-family: "Helvetica Neue", Helvetica;
+    }
+
+    line {
+        shape-rendering: optimizeSpeed;
+        vector-effect: non-scaling-stroke;
+
+        stroke: #000;
+        stroke-width: 5px;
+    }
+
+    .active-d3-item {
+        cursor: pointer;
+        stroke: magenta;
+    }
+
+</style>
+<body>
+<script src="//d3js.org/d3.v4.min.js"></script>
+<script>
+    var width = 960,
+        height = 500,
+        activeClassName = 'active-d3-item';
+
+    var svg = d3.select('body').append('svg');
+    svg.attr('width', width);
+    svg.attr('height', height);
+
+    //The data for our lines and endpoints
+    var data = [
+        {
+            'x1': 350,
+            'y1': 15,
+            'x2': 350,
+            'y2': 300
+        },
+    ];
+
+    // Generating the svg lines attributes
+
+    var drag = d3.drag()
+        .on('start', dragstarted)
+        .on('drag', dragged)
+        .on('end', dragended);
+
+    // Pointer to the d3 lines
+    var lines = svg
+        .selectAll('line')
+        .data(data)
+        .enter()
+        .append('line')
+        .style("stroke-width", 2)
+        .style("stroke", "black")
+        // .style("stroke-dasharray", ("4, 2"))
+        .attr("x1", d => d.x1)
+        .attr("x2", d => d.x2)
+        .attr("y1", d => d.y1)
+        .attr("y2", d => d.y2)
+        .call(drag);
+
+    let text = svg.append("text")
+        .attr("x", 20)
+        .attr("y", 20)
+        .text(lines.attr("x1"));
+
+    function stepPosition(x){
+        let step = width/30;
+        return Math.round(x / step) * step;
+    }
+
+    function dragstarted() {
+        d3.select(this).classed(activeClassName, true);
+    }
+
+    function dragged() {
+        var x = d3.event.x;
+        text.text(stepPosition(x));
+        var line = d3.select(this);
+        line
+            .attr("x1", stepPosition(x))
+            .attr("x2", stepPosition(x));
+    }
+
+    function dragended() {
+        d3.select(this).classed(activeClassName, false);
+    }
+</script>

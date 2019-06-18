@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14c1f270-d70f-4e0c-8543-075465f9e7c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Crosshair.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ResizableRect.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dragLine.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resizeRect.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -18,8 +20,8 @@
     <session id="-1424546682">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="19" />
-          <entry key="project.open.time.0" value="2" />
+          <entry key="project.closed" value="20" />
+          <entry key="project.open.time.0" value="3" />
           <entry key="project.open.time.1" value="10" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.12" value="1" />
@@ -32,13 +34,13 @@
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.85" value="1" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="27" />
+          <entry key="project.opened" value="28" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="csv" value="2" />
-          <entry key="html" value="51" />
+          <entry key="html" value="54" />
           <entry key="js" value="6" />
           <entry key="json" value="7" />
           <entry key="tsv" value="1" />
@@ -47,7 +49,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSV" value="2" />
-          <entry key="HTML" value="51" />
+          <entry key="HTML" value="54" />
           <entry key="JSON" value="6" />
           <entry key="JavaScript" value="6" />
           <entry key="TSV" value="1" />
@@ -56,13 +58,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="17337" />
+          <entry key="html" value="17811" />
           <entry key="json" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="17337" />
+          <entry key="HTML" value="17811" />
           <entry key="JSON" value="3" />
         </counts>
       </usages-collector>
@@ -73,7 +75,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/streamgraph.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
+            <state>
               <caret line="27" selection-start-line="27" selection-end-line="27" />
             </state>
           </provider>
@@ -89,37 +91,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/verticalTooltip.html">
+        <entry file="file://$PROJECT_DIR$/ResizableRect.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3768">
-              <caret line="157" column="49" selection-start-line="157" selection-start-column="49" selection-end-line="157" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/streamgraphPurple.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+            <state relative-caret-position="597">
+              <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Crosshair.html">
+        <entry file="file://$PROJECT_DIR$/dragLine.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="949">
-              <caret line="196" column="31" lean-forward="true" selection-start-line="196" selection-start-column="31" selection-end-line="196" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/verticalTooltipData.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3024">
-              <caret line="126" column="15" selection-start-line="126" selection-start-column="15" selection-end-line="126" selection-end-column="15" />
+            <state relative-caret-position="188">
+              <caret line="72" column="30" lean-forward="true" selection-start-line="72" selection-start-column="30" selection-end-line="72" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -156,9 +140,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/javascripts/slider.js" />
-        <option value="$PROJECT_DIR$/d3.slider.js" />
-        <option value="$PROJECT_DIR$/D3Sider.html" />
         <option value="$PROJECT_DIR$/fillform.html" />
         <option value="$PROJECT_DIR$/slider.html" />
         <option value="$PROJECT_DIR$/d3.slider.css" />
@@ -207,6 +188,9 @@
         <option value="$PROJECT_DIR$/verticalTooltip.html" />
         <option value="$PROJECT_DIR$/streamgraphPurple.html" />
         <option value="$PROJECT_DIR$/Crosshair.html" />
+        <option value="$PROJECT_DIR$/resizeRect.html" />
+        <option value="$PROJECT_DIR$/ResizableRect.html" />
+        <option value="$PROJECT_DIR$/dragLine.html" />
       </list>
     </option>
   </component>
@@ -216,9 +200,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
+    <option name="x" value="15" />
     <option name="y" value="23" />
-    <option name="width" value="1114" />
+    <option name="width" value="1099" />
     <option name="height" value="1417" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -392,15 +377,16 @@
       <workItem from="1560370911792" duration="835000" />
       <workItem from="1560460849658" duration="604000" />
       <workItem from="1560527056144" duration="597000" />
-      <workItem from="1560719621545" duration="3928000" />
+      <workItem from="1560719621545" duration="5110000" />
+      <workItem from="1560873987286" duration="4286000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="307311000" />
+    <option name="totallyTimeSpent" value="312779000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1114" height="1417" extended-state="1" />
+    <frame x="15" y="23" width="1114" height="1417" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21408966" />
@@ -473,23 +459,6 @@
     <select />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/simpleSlider.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="25" column="24" lean-forward="true" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notes/debug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/info.tsv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/javascripts/slider.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -766,15 +735,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/streamgraph.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
+        <state>
           <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Stream.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -785,13 +747,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/verticalTooltipData.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3024">
-          <caret line="126" column="15" selection-start-line="126" selection-start-column="15" selection-end-line="126" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/streamgraphPurple.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -799,10 +754,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resizeRect.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="16" column="36" lean-forward="true" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Crosshair.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="949">
-          <caret line="196" column="31" lean-forward="true" selection-start-line="196" selection-start-column="31" selection-end-line="196" selection-end-column="31" />
+        <state relative-caret-position="4704">
+          <caret line="194" column="42" selection-start-line="194" selection-start-column="42" selection-end-line="194" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/verticalTooltipData.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1218">
+          <caret line="126" column="15" selection-start-line="126" selection-start-column="15" selection-end-line="126" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Stream.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ResizableRect.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="597">
+          <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dragLine.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="72" column="30" lean-forward="true" selection-start-line="72" selection-start-column="30" selection-end-line="72" selection-end-column="30" />
         </state>
       </provider>
     </entry>
