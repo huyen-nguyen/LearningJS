@@ -70,7 +70,7 @@
         .attr("y1", d => d.y1)
         .attr("y2", d => d.y2);
 
-    let groupWidth = 20;
+    let groupWidth = 30;
     group.append("rect")
         .attr("id", "overlayDashedGroup")
         .attr("class", "overlay")
@@ -104,6 +104,6 @@
     }
 
     function dragended() {
-        d3.select(this).classed(activeClassName, false);
+        d3.select(this).select("line").classed(activeClassName, false);
     }
 </script>

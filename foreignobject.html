@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>HTML inside SVG</title>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <style type="text/css"></style></head>
+<style>
+    .markRight {
+        background: red;
+        display: inline-block;
+        height: 10px;
+        margin-left: 0px;
+        margin-top: 10px;
+        position: relative;
+        width: 10px;
+    }
+    .markRight:before {
+        border-bottom: 10px solid red;
+        border-left: 0px solid transparent;
+        border-right: 10px solid transparent;
+        content: "";
+        height: 0;
+        left: 0;
+        position: absolute;
+        top: -10px;
+        width: 0;
+    }
+
+    .markLeft {
+        background: red;
+        display: inline-block;
+        height: 10px;
+        margin-left: -10px;
+        margin-top: 10px;
+        position: relative;
+        width: 10px;
+    }
+    .markLeft:before {
+        border-bottom: 10px solid red;
+        border-left: 10px solid transparent;
+        border-right: 0px solid transparent;
+        content: "";
+        height: 0;
+        left: 0;
+        position: absolute;
+        top: -10px;
+        width: 0;
+    }
+    * {
+        padding:0px;
+        margin:0px;
+    }
+
+    .container {
+        position: relative;
+        box-shadow: inset 0 0 0 5px #add;
+    }
+
+    html, body {
+        width: 100%;
+        height: 100%;
+    }
+
+    #svg {
+        background: #afa;
+        display:block;
+        width:100%;
+        height:100%;
+    }
+    #svg line {
+        stroke:#000;
+        fille:none;
+        pointer-events: all;
+        stroke-width:5px;
+    }
+    #svg line:hover {
+        stroke:#aaa;
+    }
+    .overlay {
+        position: absolute;
+        background: rgba(100,100,100,0);
+        top:0px;
+        bottom:0px;
+        left:0px;
+        right:0px;
+    }
+
+    .element {
+        background: #aae;
+        position: absolute;
+        opacity: .7;
+    }
+
+    .rectangle {
+        width:100px;
+        height:40px;
+    }
+
+    #r1 {
+        left:200px;
+        top:100px;
+    }
+
+    #r2 {
+        left:500px;
+        top:80px;
+    }
+
+    .red {
+        background: #faa;
+    }
+
+    .green{
+        background: #afa;
+    }
+
+    .blue{
+        background: #aaf;
+    }
+</style>
+<body>
+<div>I'm a div inside the HTML</div>
+<div class="container">
+    <svg id="svg">
+        <line x1=250 y1=120 x2=550 y2=100></line>
+    </svg>
+    <div class="overlay">
+        <div id="r1" class="element rectangle red"></div>
+        <div id="r2" class="element rectangle blue"></div>
+        <div id="r3" class="element rectangle green"></div>
+        <div id="r4" class="element rectangle"></div>
+    </div>
+</div>
+<div class="msg">Executing Javascript....</div>
+<div>Interesting! But you a Foreign Object.</div>
+<script>
+    const strikes = [1586200114000, 1586204242000, 1586350794000, 1586356642000, 1586459159000, 1586468448000];
+    let svg = d3.select("#svg");
+</script>
+</body>
+</html>

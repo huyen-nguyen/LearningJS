@@ -2,6 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14c1f270-d70f-4e0c-8543-075465f9e7c6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/data/tableData.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foreignobject.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/markers.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/markersCSS.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nestedTable.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/piechart.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/table.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dragLine.html" beforeDir="false" afterPath="$PROJECT_DIR$/dragLine.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -17,27 +25,28 @@
     <session id="-1424546682">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="20" />
+          <entry key="project.closed" value="25" />
           <entry key="project.open.time.0" value="3" />
-          <entry key="project.open.time.1" value="10" />
+          <entry key="project.open.time.1" value="15" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.25" value="1" />
           <entry key="project.open.time.3" value="2" />
           <entry key="project.open.time.41" value="1" />
           <entry key="project.open.time.67" value="1" />
-          <entry key="project.open.time.8" value="1" />
+          <entry key="project.open.time.8" value="2" />
           <entry key="project.open.time.85" value="1" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="28" />
+          <entry key="project.opened" value="35" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="csv" value="2" />
-          <entry key="html" value="54" />
+          <entry key="csv" value="4" />
+          <entry key="html" value="60" />
           <entry key="js" value="6" />
           <entry key="json" value="7" />
           <entry key="tsv" value="1" />
@@ -45,8 +54,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSV" value="2" />
-          <entry key="HTML" value="54" />
+          <entry key="CSV" value="4" />
+          <entry key="HTML" value="60" />
           <entry key="JSON" value="6" />
           <entry key="JavaScript" value="6" />
           <entry key="TSV" value="1" />
@@ -55,13 +64,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="18184" />
+          <entry key="html" value="18772" />
           <entry key="json" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="18184" />
+          <entry key="HTML" value="18772" />
           <entry key="JSON" value="3" />
         </counts>
       </usages-collector>
@@ -70,37 +79,90 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/streamgraph.html">
+        <entry file="file://$PROJECT_DIR$/ResizableRect.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="2184">
+              <caret line="91" selection-start-line="91" selection-end-line="91" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dragLine.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1368">
+              <caret line="57" selection-start-line="57" selection-end-line="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/piechart.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="384">
+              <caret line="16" column="8" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/table.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="332">
+              <caret line="87" column="19" selection-start-line="87" selection-start-column="19" selection-end-line="87" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/markers.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="5" column="8" lean-forward="true" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/markersCSS.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="13" column="20" selection-start-line="6" selection-end-line="46" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/foreignobject.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="836">
+              <caret line="131" column="53" lean-forward="true" selection-start-line="128" selection-start-column="7" selection-end-line="131" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/data.csv">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/tableData.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="648">
               <caret line="27" selection-start-line="27" selection-end-line="27" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Stream.html">
+        <entry file="file://$PROJECT_DIR$/nestedTable.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ResizableRect.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="597">
-              <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/dragLine.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="631">
-              <caret line="80" column="37" lean-forward="true" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="37" />
+            <state relative-caret-position="1152">
+              <caret line="101" column="51" selection-start-line="101" selection-start-column="51" selection-end-line="101" selection-end-column="51" />
+              <folding>
+                <element signature="e#620#1952#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -129,7 +191,11 @@
       <find>json</find>
       <find>gri</find>
       <find>mise</find>
+      <find>base</find>
     </findStrings>
+    <replaceStrings>
+      <replace>mark</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -137,13 +203,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/fillform.html" />
-        <option value="$PROJECT_DIR$/slider.html" />
-        <option value="$PROJECT_DIR$/d3.slider.css" />
-        <option value="$PROJECT_DIR$/allslider.html" />
-        <option value="$PROJECT_DIR$/span.html" />
-        <option value="$PROJECT_DIR$/letter.html" />
-        <option value="$PROJECT_DIR$/greatExample.html" />
         <option value="$PROJECT_DIR$/notes/D3notes" />
         <option value="$PROJECT_DIR$/Blank.html" />
         <option value="$PROJECT_DIR$/data/food.csv" />
@@ -188,6 +247,13 @@
         <option value="$PROJECT_DIR$/resizeRect.html" />
         <option value="$PROJECT_DIR$/ResizableRect.html" />
         <option value="$PROJECT_DIR$/dragLine.html" />
+        <option value="$PROJECT_DIR$/nestedTable.html" />
+        <option value="$PROJECT_DIR$/piechart.html" />
+        <option value="$PROJECT_DIR$/data/tableData.csv" />
+        <option value="$PROJECT_DIR$/table.html" />
+        <option value="$PROJECT_DIR$/markers.html" />
+        <option value="$PROJECT_DIR$/markersCSS.html" />
+        <option value="$PROJECT_DIR$/foreignobject.html" />
       </list>
     </option>
   </component>
@@ -198,9 +264,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1080" />
+    <option name="x" value="77" />
     <option name="y" value="23" />
-    <option name="width" value="1099" />
+    <option name="width" value="965" />
     <option name="height" value="1417" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -225,7 +291,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -247,6 +312,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -285,36 +351,36 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.verticalTooltip.html">
-    <configuration name="ConvexHullv4.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/LearningJS/ConvexHullv4.html">
-      <method v="2" />
-    </configuration>
-    <configuration name="CurvedLinks.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/LearningJS/CurvedLinks.html">
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="JavaScript Debug.markersCSS.html">
     <configuration name="groupNodes.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/LearningJS/groupNodes.html">
       <method v="2" />
     </configuration>
-    <configuration name="streamgraph.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/LearningJS/streamgraph.html">
+    <configuration name="markersCSS.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/LearningJS/markersCSS.html">
+      <method v="2" />
+    </configuration>
+    <configuration name="piechart.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/LearningJS/piechart.html">
+      <method v="2" />
+    </configuration>
+    <configuration name="table.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/LearningJS/table.html">
       <method v="2" />
     </configuration>
     <configuration name="verticalTooltip.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/LearningJS/verticalTooltip.html">
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JavaScript Debug.streamgraph.html" />
-      <item itemvalue="JavaScript Debug.CurvedLinks.html" />
       <item itemvalue="JavaScript Debug.groupNodes.html" />
-      <item itemvalue="JavaScript Debug.ConvexHullv4.html" />
       <item itemvalue="JavaScript Debug.verticalTooltip.html" />
+      <item itemvalue="JavaScript Debug.piechart.html" />
+      <item itemvalue="JavaScript Debug.table.html" />
+      <item itemvalue="JavaScript Debug.markersCSS.html" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.markersCSS.html" />
+        <item itemvalue="JavaScript Debug.table.html" />
+        <item itemvalue="JavaScript Debug.piechart.html" />
         <item itemvalue="JavaScript Debug.verticalTooltip.html" />
         <item itemvalue="JavaScript Debug.groupNodes.html" />
-        <item itemvalue="JavaScript Debug.ConvexHullv4.html" />
-        <item itemvalue="JavaScript Debug.CurvedLinks.html" />
-        <item itemvalue="JavaScript Debug.streamgraph.html" />
       </list>
     </recent_temporary>
   </component>
@@ -375,18 +441,25 @@
       <workItem from="1560460849658" duration="604000" />
       <workItem from="1560527056144" duration="597000" />
       <workItem from="1560719621545" duration="5110000" />
-      <workItem from="1560873987286" duration="7178000" />
+      <workItem from="1560873987286" duration="8941000" />
+      <workItem from="1561066533094" duration="3126000" />
+      <workItem from="1561499990523" duration="1000" />
+      <workItem from="1561578226425" duration="3746000" />
+      <workItem from="1561840212843" duration="1222000" />
+      <workItem from="1561924027724" duration="727000" />
+      <workItem from="1562000171792" duration="2051000" />
+      <workItem from="1562020443503" duration="7504000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="315671000" />
+    <option name="totallyTimeSpent" value="335811000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1080" y="23" width="1099" height="1417" extended-state="0" />
+    <frame x="966" y="23" width="965" height="1417" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21706864" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24788135" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -456,55 +529,6 @@
     <select />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/javascripts/slider.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/food.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SvgBarChart.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-177">
-          <caret line="5" column="50" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notes/D3notes">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DivStuff.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="888">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BarUpdate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2952">
-          <caret line="123" column="15" selection-start-line="117" selection-start-column="11" selection-end-line="123" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BarUpgrade.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2736">
-          <caret line="114" column="19" selection-start-line="114" selection-start-column="19" selection-end-line="114" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Blank.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -720,9 +744,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/data.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/ScatterplotUpdate.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1182">
@@ -765,6 +786,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/streamgraph.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Stream.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -774,22 +802,70 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ResizableRect.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="597">
-          <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/streamgraph.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="2184">
+          <caret line="91" selection-start-line="91" selection-end-line="91" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dragLine.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="631">
-          <caret line="80" column="37" lean-forward="true" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="37" />
+        <state relative-caret-position="1368">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/piechart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="16" column="8" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/data.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/tableData.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nestedTable.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1152">
+          <caret line="101" column="51" selection-start-line="101" selection-start-column="51" selection-end-line="101" selection-end-column="51" />
+          <folding>
+            <element signature="e#620#1952#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/table.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="87" column="19" selection-start-line="87" selection-start-column="19" selection-end-line="87" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/markers.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="8" lean-forward="true" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/markersCSS.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="13" column="20" selection-start-line="6" selection-end-line="46" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/foreignobject.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="836">
+          <caret line="131" column="53" lean-forward="true" selection-start-line="128" selection-start-column="7" selection-end-line="131" selection-end-column="53" />
         </state>
       </provider>
     </entry>

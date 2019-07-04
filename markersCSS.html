@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #markRight {
+            background: red;
+            display: inline-block;
+            height: 10px;
+            margin-left: 0px;
+            margin-top: 10px;
+            position: relative;
+            width: 10px;
+        }
+        #markRight:before {
+            border-bottom: 10px solid red;
+            border-left: 0px solid transparent;
+            border-right: 10px solid transparent;
+            content: "";
+            height: 0;
+            left: 0;
+            position: absolute;
+            top: -10px;
+            width: 0;
+        }
+
+        #markLeft {
+            background: red;
+            display: inline-block;
+            height: 10px;
+            margin-left: -10px;
+            margin-top: 10px;
+            position: relative;
+            width: 10px;
+        }
+        #markLeft:before {
+            border-bottom: 10px solid red;
+            border-left: 10px solid transparent;
+            border-right: 0px solid transparent;
+            content: "";
+            height: 0;
+            left: 0;
+            position: absolute;
+            top: -10px;
+            width: 0;
+        }
+    </style>
+</head>
+<body>
+<div id="markLeft"></div>
+<div id="markRight"></div>
+</body>
+</html>
