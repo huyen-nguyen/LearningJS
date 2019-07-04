@@ -45,10 +45,78 @@
             top: -10px;
             width: 0;
         }
+        .close-button {
+            display: inline-block;
+            -webkit-box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            box-sizing: content-box;
+            width: 0.16em;
+            height: 0.16em;
+            position: absolute;
+            border: none;
+            -webkit-border-radius: 1em;
+            border-radius: 1em;
+            font: normal 8em/normal Arial, Helvetica, sans-serif;
+            color: rgba(0,0,0,1);
+            -o-text-overflow: clip;
+            text-overflow: clip;
+            background: #197764;
+            transition: 0.3s;
+            cursor: pointer;
+            opacity: 0.4;
+        }
+
+        .close-button::before {
+            display: inline-block;
+            -webkit-box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            box-sizing: content-box;
+            width: 0.45em;
+            height: 0.1em;
+            position: absolute;
+            content: "";
+            top: 0.32em;
+            left: 0.17em;
+            border: none;
+            font: normal 20%/normal Arial, Helvetica, sans-serif;
+            color: rgba(0,0,0,1);
+            -o-text-overflow: clip;
+            text-overflow: clip;
+            background: #ffffff;
+            text-shadow: none;
+            -webkit-transform: rotateZ(45deg)   ;
+            transform: rotateZ(45deg)   ;
+        }
+
+        .close-button::after {
+            display: inline-block;
+            -webkit-box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            box-sizing: content-box;
+            width: 0.45em;
+            height: 0.1em;
+            position: absolute;
+            content: "";
+            top: 0.32em;
+            left: 0.17em;
+            border: none;
+            font: normal 20%/normal Arial, Helvetica, sans-serif;
+            color: rgba(0,0,0,1);
+            -o-text-overflow: clip;
+            text-overflow: clip;
+            background: #ffffff;
+            text-shadow: none;
+            -webkit-transform: rotateZ(-45deg)   ;
+            transform: rotateZ(-45deg)   ;
+        }
+        .close-button:hover{
+            opacity: 0.9;
+        }
     </style>
 </head>
 <body>
 <div id="markLeft"></div>
 <div id="markRight"></div>
+<div class="close-button"></div>
 </body>
 </html>

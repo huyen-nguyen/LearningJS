@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14c1f270-d70f-4e0c-8543-075465f9e7c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data/tableData.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foreignobject.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/markers.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/markersCSS.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nestedTable.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/piechart.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/table.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dragLine.html" beforeDir="false" afterPath="$PROJECT_DIR$/dragLine.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/markersCSS.html" beforeDir="false" afterPath="$PROJECT_DIR$/markersCSS.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,6 +25,7 @@
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.25" value="1" />
           <entry key="project.open.time.3" value="2" />
@@ -40,7 +34,7 @@
           <entry key="project.open.time.8" value="2" />
           <entry key="project.open.time.85" value="1" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="35" />
+          <entry key="project.opened" value="36" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -64,13 +58,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="18772" />
+          <entry key="html" value="18928" />
           <entry key="json" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="18772" />
+          <entry key="HTML" value="18928" />
           <entry key="JSON" value="3" />
         </counts>
       </usages-collector>
@@ -100,7 +94,7 @@
         <entry file="file://$PROJECT_DIR$/piechart.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="384">
-              <caret line="16" column="8" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+              <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -108,7 +102,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/table.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
+            <state relative-caret-position="2088">
               <caret line="87" column="19" selection-start-line="87" selection-start-column="19" selection-end-line="87" selection-end-column="19" />
             </state>
           </provider>
@@ -118,25 +112,25 @@
         <entry file="file://$PROJECT_DIR$/markers.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="5" column="8" lean-forward="true" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/markersCSS.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="13" column="20" selection-start-line="6" selection-end-line="46" selection-end-column="9" />
+              <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/markersCSS.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="397">
+              <caret line="54" column="30" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/foreignobject.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="836">
-              <caret line="131" column="53" lean-forward="true" selection-start-line="128" selection-start-column="7" selection-end-line="131" selection-end-column="53" />
+            <state relative-caret-position="3144">
+              <caret line="131" column="53" selection-start-line="128" selection-start-column="7" selection-end-line="131" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -252,8 +246,8 @@
         <option value="$PROJECT_DIR$/data/tableData.csv" />
         <option value="$PROJECT_DIR$/table.html" />
         <option value="$PROJECT_DIR$/markers.html" />
-        <option value="$PROJECT_DIR$/markersCSS.html" />
         <option value="$PROJECT_DIR$/foreignobject.html" />
+        <option value="$PROJECT_DIR$/markersCSS.html" />
       </list>
     </option>
   </component>
@@ -264,9 +258,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="77" />
     <option name="y" value="23" />
-    <option name="width" value="965" />
+    <option name="width" value="1042" />
     <option name="height" value="1417" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -448,18 +441,19 @@
       <workItem from="1561840212843" duration="1222000" />
       <workItem from="1561924027724" duration="727000" />
       <workItem from="1562000171792" duration="2051000" />
-      <workItem from="1562020443503" duration="7504000" />
+      <workItem from="1562020443503" duration="8011000" />
+      <workItem from="1562257699323" duration="3080000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="335811000" />
+    <option name="totallyTimeSpent" value="339398000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="966" y="23" width="965" height="1417" extended-state="0" />
+    <frame x="0" y="23" width="1042" height="1417" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24788135" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22918707" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -817,7 +811,28 @@
     <entry file="file://$PROJECT_DIR$/piechart.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
-          <caret line="16" column="8" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/table.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2088">
+          <caret line="87" column="19" selection-start-line="87" selection-start-column="19" selection-end-line="87" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/markers.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/foreignobject.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3144">
+          <caret line="131" column="53" selection-start-line="128" selection-start-column="7" selection-end-line="131" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -841,31 +856,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/table.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="87" column="19" selection-start-line="87" selection-start-column="19" selection-end-line="87" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/markers.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="8" lean-forward="true" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/markersCSS.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="13" column="20" selection-start-line="6" selection-end-line="46" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/foreignobject.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="131" column="53" lean-forward="true" selection-start-line="128" selection-start-column="7" selection-end-line="131" selection-end-column="53" />
+        <state relative-caret-position="397">
+          <caret line="54" column="30" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
         </state>
       </provider>
     </entry>
