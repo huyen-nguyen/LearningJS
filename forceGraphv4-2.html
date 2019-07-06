@@ -93,18 +93,24 @@
     // no location
     var nodes = svg.append("g")
         .attr("class", "node")
-        .selectAll("circle")
+        .selectAll("g")
         .data(nodes_data)
         .enter()
-        .append("circle")
-        .attr("fill", d => d.sex === "M" ? "steelblue" : "pink")
-        .attr("r", 6)
+        .append("g")
         .call(d3.drag()
             .on("start", dragstarted)
             .on("drag", dragged)
             .on("end", dragended));
 
-    ;
+    nodes
+        .append("circle")
+        .attr("fill", d => d.sex === "M" ? "steelblue" : "pink")
+        .attr("r", 6);
+
+    nodes.append("text")
+        .attr("x", 6)
+        .attr("y", 6)
+        .text(d => d.name);
 
     simulation.nodes(nodes_data);
 
@@ -118,13 +124,15 @@
             .attr("x2", d => d.target.x)
             .attr("y2", d => d.target.y);
 
-        nodes.attr("cx", d => d.x)
-            .attr("cy", d => d.y);
+        nodes
+            .attr("transform", function(d) {
+                return "translate(" + d.x + "," + d.y + ")";
+            })
 
     }
 
     function dragstarted(d) {
-        if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+        if (!d3.event.active) simulation.alphaTarget(0.9).restart();
         d.fx = d.x;
         d.fy = d.y;
     }

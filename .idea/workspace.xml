@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14c1f270-d70f-4e0c-8543-075465f9e7c6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/forceGraphv4-2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/horiBar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/markersCSS.html" beforeDir="false" afterPath="$PROJECT_DIR$/markersCSS.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ForceDirectedGraph.html" beforeDir="false" afterPath="$PROJECT_DIR$/ForceDirectedGraph.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forceGraphv4.html" beforeDir="false" afterPath="$PROJECT_DIR$/forceGraphv4.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,9 +21,9 @@
     <session id="-1424546682">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="25" />
+          <entry key="project.closed" value="27" />
           <entry key="project.open.time.0" value="3" />
-          <entry key="project.open.time.1" value="15" />
+          <entry key="project.open.time.1" value="16" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="1" />
@@ -31,16 +34,17 @@
           <entry key="project.open.time.3" value="2" />
           <entry key="project.open.time.41" value="1" />
           <entry key="project.open.time.67" value="1" />
+          <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="2" />
           <entry key="project.open.time.85" value="1" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="36" />
+          <entry key="project.opened" value="38" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="csv" value="4" />
-          <entry key="html" value="60" />
+          <entry key="html" value="64" />
           <entry key="js" value="6" />
           <entry key="json" value="7" />
           <entry key="tsv" value="1" />
@@ -49,7 +53,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSV" value="4" />
-          <entry key="HTML" value="60" />
+          <entry key="HTML" value="64" />
           <entry key="JSON" value="6" />
           <entry key="JavaScript" value="6" />
           <entry key="TSV" value="1" />
@@ -58,13 +62,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="18928" />
+          <entry key="html" value="18998" />
           <entry key="json" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="18928" />
+          <entry key="HTML" value="18998" />
           <entry key="JSON" value="3" />
         </counts>
       </usages-collector>
@@ -72,42 +76,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ResizableRect.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2184">
-              <caret line="91" selection-start-line="91" selection-end-line="91" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dragLine.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1368">
-              <caret line="57" selection-start-line="57" selection-end-line="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/piechart.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/table.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2088">
-              <caret line="87" column="19" selection-start-line="87" selection-start-column="19" selection-end-line="87" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/markers.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -117,11 +85,47 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/markersCSS.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
+            <state relative-caret-position="1296">
               <caret line="54" column="30" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/horiBar.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="639">
+              <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ForceDirectedGraph.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="24">
+              <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/forceGraphv4.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="641">
+              <caret line="106" column="5" lean-forward="true" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/forceGraphv4-2.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="777">
+              <caret line="130" column="56" selection-start-line="130" selection-start-column="56" selection-end-line="130" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -129,7 +133,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/foreignobject.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3144">
+            <state relative-caret-position="1182">
               <caret line="131" column="53" selection-start-line="128" selection-start-column="7" selection-end-line="131" selection-end-column="53" />
             </state>
           </provider>
@@ -186,6 +190,7 @@
       <find>gri</find>
       <find>mise</find>
       <find>base</find>
+      <find>dra</find>
     </findStrings>
     <replaceStrings>
       <replace>mark</replace>
@@ -197,8 +202,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/notes/D3notes" />
-        <option value="$PROJECT_DIR$/Blank.html" />
         <option value="$PROJECT_DIR$/data/food.csv" />
         <option value="$PROJECT_DIR$/Example.html" />
         <option value="$PROJECT_DIR$/DivStuff.html" />
@@ -218,8 +221,6 @@
         <option value="$PROJECT_DIR$/alphabet.html" />
         <option value="$PROJECT_DIR$/forceGraph.html" />
         <option value="$PROJECT_DIR$/lib/d3.v4.min.js" />
-        <option value="$PROJECT_DIR$/ForceDirectedGraph.html" />
-        <option value="$PROJECT_DIR$/forceGraphv4.html" />
         <option value="$PROJECT_DIR$/streamgraph.html" />
         <option value="$PROJECT_DIR$/sideNavigation.html" />
         <option value="$PROJECT_DIR$/self-link.html" />
@@ -248,6 +249,10 @@
         <option value="$PROJECT_DIR$/markers.html" />
         <option value="$PROJECT_DIR$/foreignobject.html" />
         <option value="$PROJECT_DIR$/markersCSS.html" />
+        <option value="$PROJECT_DIR$/horiBar.html" />
+        <option value="$PROJECT_DIR$/ForceDirectedGraph.html" />
+        <option value="$PROJECT_DIR$/forceGraphv4.html" />
+        <option value="$PROJECT_DIR$/forceGraphv4-2.html" />
       </list>
     </option>
   </component>
@@ -259,7 +264,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1042" />
+    <option name="width" value="1065" />
     <option name="height" value="1417" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -319,17 +324,17 @@
     <property name="settings.editor.selected.configurable" value="com.chrisrm.idea.config" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/data" />
+      <recent name="D:\GitHub\LearningJS" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/javascripts" />
       <recent name="$PROJECT_DIR$/lib" />
       <recent name="$PROJECT_DIR$/images" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/Notes" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/data" />
-      <recent name="D:\GitHub\LearningJS" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -443,17 +448,19 @@
       <workItem from="1562000171792" duration="2051000" />
       <workItem from="1562020443503" duration="8011000" />
       <workItem from="1562257699323" duration="3080000" />
+      <workItem from="1562355450811" duration="1582000" />
+      <workItem from="1562439989340" duration="1023000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="339398000" />
+    <option name="totallyTimeSpent" value="342003000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1042" height="1417" extended-state="0" />
+    <frame x="0" y="23" width="1065" height="1417" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22918707" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19923371" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -523,20 +530,6 @@
     <select />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Blank.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="53" lean-forward="true" selection-start-line="5" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Virtual Scrolling.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2568">
-          <caret line="107" column="10" selection-start-line="107" selection-start-column="10" selection-end-line="107" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/javascripts/virtualscroller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -624,13 +617,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ForceDirectedGraph.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1944">
-          <caret line="81" column="13" selection-start-line="81" selection-start-column="13" selection-end-line="81" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/loadData.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -652,13 +638,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-353">
           <caret line="734" column="18" selection-start-line="734" selection-start-column="18" selection-end-line="734" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/forceGraphv4.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1196">
-          <caret line="67" column="63" selection-start-line="67" selection-start-column="63" selection-end-line="67" selection-end-column="63" />
         </state>
       </provider>
     </entry>
@@ -829,10 +808,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/foreignobject.html">
+    <entry file="file://$PROJECT_DIR$/markersCSS.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3144">
-          <caret line="131" column="53" selection-start-line="128" selection-start-column="7" selection-end-line="131" selection-end-column="53" />
+        <state relative-caret-position="1296">
+          <caret line="54" column="30" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -856,10 +835,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/markersCSS.html">
+    <entry file="file://$PROJECT_DIR$/horiBar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="54" column="30" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
+        <state relative-caret-position="639">
+          <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/foreignobject.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1182">
+          <caret line="131" column="53" selection-start-line="128" selection-start-column="7" selection-end-line="131" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ForceDirectedGraph.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forceGraphv4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="641">
+          <caret line="106" column="5" lean-forward="true" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forceGraphv4-2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="777">
+          <caret line="130" column="56" selection-start-line="130" selection-start-column="56" selection-end-line="130" selection-end-column="56" />
         </state>
       </provider>
     </entry>
