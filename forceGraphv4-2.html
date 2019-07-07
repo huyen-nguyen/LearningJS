@@ -41,7 +41,15 @@
         {"name": "Baron", "sex": "M"},
         {"name": "Infante", "sex": "M"},
         {"name": "Percy", "sex": "M"},
-        {"name": "Cynthia", "sex": "F"}
+        {"name": "Cynthia", "sex": "F"},
+        {"name": "S", "sex": "F"},
+        {"name": "A", "sex": "F"},
+        {"name": "Y", "sex": "F"},
+        {"name": "K", "sex": "F"},
+        {"name": "Q", "sex": "F"},
+        {"name": "W", "sex": "F"},
+        {"name": "E", "sex": "F"},
+        {"name": "R", "sex": "F"},
     ];
 
     var links_data = links_data = [
@@ -75,8 +83,8 @@
     // define simulation
     var simulation = d3.forceSimulation()
         .force("link", d3.forceLink().id(function(d) { return d.name; })
-            .distance(30))
-        .force("charge", d3.forceManyBody().strength(-300))
+            .distance(50).strength(0.4))
+        .force("charge", d3.forceManyBody().strength(-100))
         .force("center", d3.forceCenter(width / 2, height / 2))
         .on("tick", tick);
 
@@ -104,7 +112,7 @@
             .on("drag", dragged)
             .on("end", dragended));
 
-    nodes
+    let circles = nodes
         .append("circle")
         .attr("fill", d => d.sex === "M" ? "steelblue" : "pink")
         .attr("r", 6);
@@ -119,6 +127,10 @@
     simulation.force("link")
         .links(links_data);
 
+    let radius = width/3;
+    let x0 = width/2;
+    let y0 = height/2;
+
     function tick(){
         // at this moment nodes_data already has x and y for each point
         links.attr("x1", d => d.source.x)
@@ -127,9 +139,7 @@
             .attr("y2", d => d.target.y);
 
         nodes
-            .attr("transform", function(d) {
-                return "translate(" + d.x + "," + d.y + ")";
-            });
+            .attr("transform", bound);
 
         text
             .attr("x", d => {
@@ -141,9 +151,46 @@
                 let thisTransform = d3.select("#g" + d.name).attr("transform");
                 let thisY = +thisTransform.split(",")[1].split(")")[0];
                 return thisY > (height/2) ? 10 : -10
+            });
 
-            })
+        function bound(d){
+            if (distance(x0, y0, d.x, d.y) > radius){
+                [d.x, d.y] = (newPosition(d.x, d.y))
+            }
+            return "translate(" + d.x + "," + d.y + ")";
+        }
+    }
 
+
+    function solve(a, b, c) {
+        var result = (-1 * b + Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a);
+        var result2 = (-1 * b - Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a);
+
+        return [result, result2];
+    }
+
+    function newPosition(x,y){
+        // line y = ax + b
+        let a = (y-y0)/(x-x0);
+        let b = y0 -a*x0;
+
+        let c1 = a*a + 1;
+        let c2 = 2*(a*(b-y0) - x0);
+        let c3 = x0*x0 + (b-y0)*(b-y0) - radius*radius;
+        let [x1, x2] = solve(c1, c2, c3);
+
+        let y1 = a*x1 + b;
+        let y2 = a*x2 + b;
+
+        if (distance(x, y, x1, y1) < distance(x, y, x2, y2)){
+            return [x1,y1]
+        }
+        else return [x2, y2]
+    }
+
+    function distance(x1, y1, x2, y2){
+        let vecX = x1 -x2, vecY = y1 - y2;
+        return Math.sqrt(vecX * vecX + vecY * vecY);
     }
 
     function dragstarted(d) {

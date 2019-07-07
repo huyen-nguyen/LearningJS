@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14c1f270-d70f-4e0c-8543-075465f9e7c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data/mis.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/forceGraphv4-3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/forceGraphv4-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/forceGraphv4-2.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -15,25 +12,6 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/forceGraphv4-3.html">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="658">
-                    <caret line="32" column="47" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="63" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-1424546682">
@@ -80,13 +58,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="19651" />
+          <entry key="html" value="20610" />
           <entry key="json" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="19651" />
+          <entry key="HTML" value="20610" />
           <entry key="JSON" value="3" />
         </counts>
       </usages-collector>
@@ -124,8 +102,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/forceGraphv4-2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="622">
-              <caret line="148" column="38" selection-start-line="148" selection-start-column="38" selection-end-line="148" selection-end-column="38" />
+            <state relative-caret-position="-50">
+              <caret line="102" column="31" lean-forward="true" selection-start-line="102" selection-start-column="31" selection-end-line="102" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -446,12 +424,12 @@
       <workItem from="1562257699323" duration="3080000" />
       <workItem from="1562355450811" duration="1582000" />
       <workItem from="1562439989340" duration="2938000" />
-      <workItem from="1562443636256" duration="1790000" />
+      <workItem from="1562443636256" duration="8548000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="345708000" />
+    <option name="totallyTimeSpent" value="352466000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1065" height="1417" extended-state="0" />
@@ -862,8 +840,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/forceGraphv4-2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="622">
-          <caret line="148" column="38" selection-start-line="148" selection-start-column="38" selection-end-line="148" selection-end-column="38" />
+        <state relative-caret-position="-50">
+          <caret line="102" column="31" lean-forward="true" selection-start-line="102" selection-start-column="31" selection-end-line="102" selection-end-column="31" />
         </state>
       </provider>
     </entry>
