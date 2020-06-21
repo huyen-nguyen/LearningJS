@@ -62,7 +62,7 @@
             y: d => yScale(d),
             width: xScale.rangeBand(),
             height: d => height - yScale(d),
-            "fill": d => "rgb(0,0," + Math.round(d/maxValue*255) + ")"
+            "fill": d => "rgb(10,10," + Math.round(d/maxValue*255) + ")"
         });
 
     svg.selectAll("text")

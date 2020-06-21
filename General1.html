@@ -22,7 +22,7 @@
 <svg width="960" height="500">
 
 </svg>
-<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="lib/d3.v4.min.js"></script>
 
 <script>
 
@@ -35,6 +35,8 @@
 
     var t = d3.transition()
         .duration(1000);
+
+
     function update(data) {
         console.log(data);
         // DATA JOIN
@@ -45,20 +47,24 @@
         // what append, enter, exit do to "text" is actually do to the value that assigned to "text", which is the selectAll("text") selection.
 
         // append, enter, exit change the DOM/HTML structure, from the selection selectAll()
-        var text = g.selectAll("text")
+        let text = g.selectAll(".text")
             .data(data, function(d) { return d; });
+
+        console.log(text)
 
         // EXIT
         // Remove old elements as needed.
         text.exit().attr("class", "exit")
+            .attr("opacity", 1)
             .transition()
             .duration(500)
             .attr("y", 60)
+            .attr("opacity", 0)
             .remove();
         console.log(text);
         // UPDATE
         // Update old elements as needed.
-        text.attr("class", "update")
+        text.attr("class", "update text")
             .transition()
             .duration(500)
             .attr("x", function(d, i) { return i * 32; });
@@ -70,11 +76,13 @@
         // After merging the entered elements with the update selection,
         // apply operations to both.
         text.enter().append("text")
+            .attr("opacity", 0)
             .attr("y", -60)
             .attr("x", function(d, i) { return i * 32; })
             .transition()
             .duration(500)
-            .attr("class", "enter")
+            .attr("opacity", 1)
+            .attr("class", "enter text")
             .text(function(d) { return d; })
             .attr("y", 0);
         console.log(text);

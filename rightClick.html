@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<meta charset='utf-8'>
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"-->
+<!--	  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+<style>
+	.btn{display:inline-block;font-weight:400;text-align:center;white-space:nowrap;vertical-align:middle;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;border:1px solid transparent;padding:.375rem .75rem;font-size:1rem;line-height:1.5;border-radius:.25rem;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out}.btn:focus,.btn:hover{text-decoration:none}.btn.focus,.btn:focus{outline:0;box-shadow:0 0 0 .2rem rgba(0,123,255,.25)}.btn.disabled,.btn:disabled{opacity:.65}.btn:not(:disabled):not(.disabled){cursor:pointer}.btn:not(:disabled):not(.disabled).active,.btn:not(:disabled):not(.disabled):active{background-image:none}a.btn.disabled,fieldset:disabled a.btn{pointer-events:none}
+	.btn-success{color:#fff;background-color:#28a745;border-color:#28a745}.btn-success:hover{color:#fff;background-color:#218838;border-color:#1e7e34}.btn-success.focus,.btn-success:focus{box-shadow:0 0 0 .2rem rgba(40,167,69,.5)}.btn-success.disabled,.btn-success:disabled{color:#fff;background-color:#28a745;border-color:#28a745}.btn-success:not(:disabled):not(.disabled).active,.btn-success:not(:disabled):not(.disabled):active,.show>.btn-success.dropdown-toggle{color:#fff;background-color:#1e7e34;border-color:#1c7430}.btn-success:not(:disabled):not(.disabled).active:focus,.btn-success:not(:disabled):not(.disabled):active:focus,.show>.btn-success.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(40,167,69,.5)}
+	.btn-danger{color:#fff;background-color:#dc3545;border-color:#dc3545}.btn-danger:hover{color:#fff;background-color:#c82333;border-color:#bd2130}.btn-danger.focus,.btn-danger:focus{box-shadow:0 0 0 .2rem rgba(220,53,69,.5)}.btn-danger.disabled,.btn-danger:disabled{color:#fff;background-color:#dc3545;border-color:#dc3545}.btn-danger:not(:disabled):not(.disabled).active,.btn-danger:not(:disabled):not(.disabled):active,.show>.btn-danger.dropdown-toggle{color:#fff;background-color:#bd2130;border-color:#b21f2d}.btn-danger:not(:disabled):not(.disabled).active:focus,.btn-danger:not(:disabled):not(.disabled):active:focus,.show>.btn-danger.dropdown-toggle:focus{box-shadow:0 0 0 .2rem rgba(220,53,69,.5)}
+</style>
+<body>
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script>
+	let div = d3.select("body").append("div")
+		.style("position", "absolute")
+		.style("opacity", 0);
+
+	div.append("button").style("display", "inline")
+		.attr("type", "button")
+		.attr("class", "btn btn-success")
+		.html("TP")
+		.on("click", btnOnClick)
+
+
+	div.append("button").style("display", "inline")
+		.attr("type", "button")
+		.attr("class", "btn btn-danger")
+		.html("FP")
+		.on("click", btnOnClick)
+
+
+	let svg = d3.select("body").append("svg")
+		.attr("width", 300)
+		.attr("height", 300)
+		.append("g")
+
+	svg.append("rect")
+		.attr("width", 200).attr("height", 200)
+		.attr("x", 50).attr("y", 50)
+		.attr("fill", "#348763")
+		.on('contextmenu', function () {
+			d3.event.preventDefault();
+			console.log("right click");
+
+			div.transition()
+				.duration(100)
+				.style("opacity", 1)
+
+			div
+				.style("left", (d3.event.pageX - 46) + "px")
+				.style("top", (d3.event.pageY - 40) + "px")
+		});
+
+	function btnOnClick(d) {
+		console.log(this.innerText)
+		div.style("opacity", 0);
+	}
+
+
+</script>
