@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body {
+			margin: 0;
+		}
+		line {
+			stroke: #000;
+			stroke-dasharray: 5, 5;
+		}
+		polygon {
+			fill: none;
+			stroke: #000;
+		}
+		text {
+			font-family: "Helvetica", sans-serif;
+			pointer-events: none;
+			text-anchor: middle;
+			user-select: none;
+		}
+		text.small {
+			font-size: .7em;
+		}
+		.centroid {
+			fill: steelblue;
+		}
+		.centroid-line {
+			stroke: steelblue;
+			display: none;
+		}
+		.centroid-line.show {
+			display: block;
+		}
+		.mean {
+			fill: tomato;
+		}
+		.mean-line {
+			stroke: tomato;
+			display: none;
+		}
+		.mean-line.show {
+			display: block;
+		}
+		#stats {
+			background: rgba(255, 255, 255, .8);
+			font-family: monospace;
+			pointer-events: none;
+			position: absolute;
+			left: 10px;
+		}
+		.virtual {
+			opacity: .5;
+		}
+	</style>
+</head>
+<body>
+<div id="stats">
+	<div>Area of polygon: <span class="area"></span></div>
+	<div>Share of screen: <span class="pct"></span></div>
+</div>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="https://unpkg.com/geometric@1.0.0/build/geometric.min.js"></script>
+<script>
+	var width = window.innerWidth, height = window.innerHeight;
+	var svg = d3.select("body").append("svg").attr("width", width).attr("height", height);
+	var intro = svg.append("text").text("Click anywhere to begin.").attr("transform", "translate(" + [width / 2, height / 2] + ")");
+
+	var polygon = svg.append("polygon");
+
+	var connect_line = svg.append("line");
+	var end_line = svg.append("line");
+
+	var mean_g = svg.append("g").attr("transform", "translate(-100, -100)").attr("class", "mean");
+	var mean = mean_g.append("circle").attr("r", 5);
+	var mean_text = mean_g.append("text").attr("class", "small").attr("dy", 15).text("Mean");
+
+	var centroid_g = svg.append("g").attr("transform", "translate(-100, -100)").attr("class", "centroid");
+	var centroid = centroid_g.append("circle").attr("r", 5);
+	var centroid_text = centroid_g.append("text").attr("class", "small").attr("dy", -8).text("Centroid");
+
+	var mean_virtual_line = svg.append("line").attr("class", "mean-line virtual");
+	var mean_virtual = svg.append("circle").attr("class", "mean virtual").attr("r", 5).attr("transform", "translate(-100, -100)");
+
+	var centroid_virtual_line = svg.append("line").attr("class", "centroid-line virtual");
+	var centroid_virtual = svg.append("circle").attr("class", "centroid virtual").attr("r", 5).attr("transform", "translate(-100, -100)");
+
+	var points = [];
+	var first_click = true;
+
+	svg.on("click", _ => {
+		var p = [d3.event.pageX, d3.event.pageY];
+		svg.append("circle").attr("r", 3).attr("transform", "translate(" + p + ")");
+		points.push(p);
+		polygon.attr("points", points.join(" "));
+
+		var c = geometric.polygonCentroid(points);
+		if (c[0]) centroid_g.attr("transform", "translate(" + c + ")");
+		mean_g.attr("transform", "translate(" + geometric.polygonMean(points) + ")");
+
+		if (first_click){
+			intro.transition().style("opacity", 1e-6).remove();
+			first_click = 0;
+		}
+
+		var a = geometric.polygonArea(points);
+		console.log(points)
+		d3.select(".area").text(numberCommas(Math.round(a)) + "px");
+		d3.select(".pct").text((a / (width * height) * 100).toFixed(2) + "%");
+
+		mean_virtual_line.classed("show", 0);
+		centroid_virtual_line.classed("show", 0);
+	});
+
+	svg.on("mousemove", _ => {
+		if (points.length){
+			var last_point = points[points.length - 1];
+			connect_line
+				.attr("x1", last_point[0])
+				.attr("y1", last_point[1])
+				.attr("x2", d3.event.pageX)
+				.attr("y2", d3.event.pageY);
+
+			var first_point = points[0];
+			end_line
+				.attr("x1", first_point[0])
+				.attr("y1", first_point[1])
+				.attr("x2", d3.event.pageX)
+				.attr("y2", d3.event.pageY);
+
+			var virtual_points = points.slice();
+			virtual_points.push([d3.event.pageX, d3.event.pageY]);
+
+			var curr_mean  = geometric.polygonMean(points);
+			var virtual_mean = geometric.polygonMean(virtual_points);
+			mean_virtual.attr("transform", "translate(" + virtual_mean + ")");
+			mean_virtual_line
+				.classed("show", 1)
+				.attr("x1", curr_mean[0])
+				.attr("y1", curr_mean[1])
+				.attr("x2", virtual_mean[0])
+				.attr("y2", virtual_mean[1]);
+
+			var curr_centroid  = geometric.polygonCentroid(points);
+			var virtual_centroid = geometric.polygonCentroid(virtual_points);
+			if (curr_centroid[0]){
+				centroid_virtual.attr("transform", "translate(" + virtual_centroid + ")");
+				centroid_virtual_line
+					.classed("show", 1)
+					.attr("x1", curr_centroid[0])
+					.attr("y1", curr_centroid[1])
+					.attr("x2", virtual_centroid[0])
+					.attr("y2", virtual_centroid[1]);
+			}
+		}
+	});
+
+	function numberCommas(x){
+		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+	};
+</script>
+</body>
+</html>
