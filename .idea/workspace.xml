@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14c1f270-d70f-4e0c-8543-075465f9e7c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data/cars.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parallel-coordinates.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parallel-coordinatesV4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diverging-stacked-bar-chart.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -45,7 +42,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/parallel-coordinates.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
@@ -54,27 +51,39 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/cars.csv">
-          <provider editor-type-id="csv-table-editor">
-            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-          </provider>
-          <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="8932">
-              <caret line="406" column="39" selection-start-line="406" selection-start-column="39" selection-end-line="406" selection-end-column="39" />
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/diverging-stacked-bar-chart.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="17" column="30" lean-forward="true" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+              <folding>
+                <element signature="e#103#187#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/worddata.csv">
+        <entry file="file://$PROJECT_DIR$/data/cars.csv">
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="8932">
+              <caret line="406" column="39" selection-start-line="406" selection-start-column="39" selection-end-line="406" selection-end-column="39" />
+            </state>
+          </provider>
           <provider editor-type-id="csv-table-editor">
             <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/worddata.csv">
           <provider selected="true" editor-type-id="csv-text-editor">
             <state relative-caret-position="572">
               <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
             </state>
+          </provider>
+          <provider editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
           </provider>
         </entry>
       </file>
@@ -143,7 +152,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/lib/d3.v4.min.js" />
         <option value="$PROJECT_DIR$/streamgraph.html" />
         <option value="$PROJECT_DIR$/sideNavigation.html" />
         <option value="$PROJECT_DIR$/self-link.html" />
@@ -194,13 +202,13 @@
         <option value="$PROJECT_DIR$/data/cars.csv" />
         <option value="$PROJECT_DIR$/parallel-coordinatesV4.html" />
         <option value="$PROJECT_DIR$/parallel-coordinates.html" />
+        <option value="$PROJECT_DIR$/diverging-stacked-bar-chart.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="x" value="803" />
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="y" value="23" />
-    <option name="width" value="881" />
+    <option name="width" value="1680" />
     <option name="height" value="1027" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -287,8 +295,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.markersCSS.html">
-    <configuration name="groupNodes.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/LearningJS/groupNodes.html">
+  <component name="RunManager" selected="JavaScript Debug.diverging-stacked-bar-chart.html">
+    <configuration name="diverging-stacked-bar-chart.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/LearningJS/diverging-stacked-bar-chart.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="markersCSS.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/LearningJS/markersCSS.html">
@@ -304,19 +312,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JavaScript Debug.groupNodes.html" />
       <item itemvalue="JavaScript Debug.verticalTooltip.html" />
       <item itemvalue="JavaScript Debug.piechart.html" />
       <item itemvalue="JavaScript Debug.table.html" />
       <item itemvalue="JavaScript Debug.markersCSS.html" />
+      <item itemvalue="JavaScript Debug.diverging-stacked-bar-chart.html" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.diverging-stacked-bar-chart.html" />
         <item itemvalue="JavaScript Debug.markersCSS.html" />
         <item itemvalue="JavaScript Debug.table.html" />
         <item itemvalue="JavaScript Debug.piechart.html" />
         <item itemvalue="JavaScript Debug.verticalTooltip.html" />
-        <item itemvalue="JavaScript Debug.groupNodes.html" />
       </list>
     </recent_temporary>
   </component>
@@ -407,23 +415,24 @@
       <workItem from="1595947031195" duration="337000" />
       <workItem from="1596882284193" duration="6135000" />
       <workItem from="1597678222531" duration="508000" />
+      <workItem from="1605959104891" duration="2322000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="391983000" />
+    <option name="totallyTimeSpent" value="394305000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15628816" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15811966" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32925898" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.23529412" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.23443983" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -481,13 +490,6 @@
     <select />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/groupNodes.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="175" column="9" lean-forward="true" selection-start-line="175" selection-start-column="9" selection-end-line="175" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/verticalTooltip.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3768">
@@ -639,10 +641,10 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/data/data.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
-      <provider selected="true" editor-type-id="csv-text-editor" />
       <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Scroller.html">
@@ -800,23 +802,23 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/cars.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="8932">
           <caret line="406" column="39" selection-start-line="406" selection-start-column="39" selection-end-line="406" selection-end-column="39" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/worddata.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/worddata.csv">
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="572">
           <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
         </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -840,6 +842,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/diverging-stacked-bar-chart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="17" column="30" lean-forward="true" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+          <folding>
+            <element signature="e#103#187#0" />
+          </folding>
         </state>
       </provider>
     </entry>

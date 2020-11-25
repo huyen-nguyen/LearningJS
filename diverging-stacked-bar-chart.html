@@ -1,0 +1,194 @@
+<head>
+	<meta charset="utf-8">
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<style>
+
+		body {
+			padding-top: 45px;
+			margin:auto;
+			width: 650px;
+			font: 14px Consolas;
+		}
+		.tick text {
+			font-size: 11px;
+		}
+		.x-axis text {
+			font-size: 14px;
+			fill: #fff;
+			font-weight: bold;
+			font-family: Consolas;
+			text-shadow: 1px 1px 0 #000;
+		}
+
+	</style>
+</head>
+<body>
+
+<svg width="650" height="360" id="chart"></svg>
+
+Choose Year:
+<select id="options"></select>
+
+<script>
+
+	var server = [
+		{year: "2017", quarter: "Q1", team1: 400, team2: 920, team3: -196, non: -421},
+		{year: "2017", quarter: "Q2", team1: 400, team2: 440, team3: -760, non: -542},
+		{year: "2017", quarter: "Q3", team1: 600, team2: 760, team3: -640, non: -701},
+		{year: "2017", quarter: "Q4", team1: 400, team2: 480, team3: -640, non: -312},
+		{year: "2018", quarter: "Q1", team1: 920, team2: 196, team3: -400, non: -221},
+		{year: "2018", quarter: "Q2", team1: 440, team2: 960, team3: -400, non: -442},
+		{year: "2018", quarter: "Q3", team1: 960, team2: 640, team3: -600, non: -501},
+		{year: "2018", quarter: "Q4", team1: 480, team2: 640, team3: -400, non: -212}
+	];
+
+	chart(server);
+
+	function chart(result) {
+
+		var years = [...new Set(result.map(d => d.year))]
+
+		var options = d3.select("#options").selectAll("option")
+			.data(years)
+			.enter().append("option")
+			.text(d => d)
+
+		var keys = Object.keys(result[0]).slice(2),
+			copy = [].concat(keys);
+
+		var svg = d3.select("#chart"),
+			margin = {top: 15, right: 35, bottom: 15, left: 40},
+			width = +svg.attr("width") - margin.left - margin.right,
+			height = +svg.attr("height") - margin.top - margin.bottom;
+
+		var x = d3.scaleBand()
+			.rangeRound([margin.left, width - margin.right])
+			.padding(0.1);
+
+		var y = d3.scaleLinear()
+			.rangeRound([height - margin.bottom, margin.top]);
+
+		var color = d3.scaleOrdinal()
+			.range(["steelblue", "darkorange", "lightblue", "crimson"]);
+
+		var xAxis = svg.append("g")
+			.attr("transform", "translate(0," + (height - margin.bottom) + ")")
+			.attr("class","x-axis");
+
+		var yAxis = svg.append("g")
+			.attr("transform", "translate(" + margin.left + ",0)")
+			.attr("class", "y-axis");
+
+		var legend = svg.selectAll(".legend")
+			.data(keys)
+			.enter().append("g")
+			.attr("class", "legend")
+			.attr("transform", (d, i) => `translate(${margin.left},${i * 30})`);
+
+		legend.append("text")
+			.attr("x", width - 10)
+			.attr("y", margin.top)
+			.attr("text-anchor", "end")
+			.attr("dy", "1em")
+			.text(d => d);
+
+		legend.append("rect")
+			.attr("width", 19)
+			.attr("height", 19)
+			.attr("x", width)
+			.attr("y", margin.top)
+			.attr("fill", color)
+			.attr("stroke", color)
+			.attr("value", d => d)
+			.on("click", keyFilter)
+
+		draw(d3.select("#options").property("value"), 0, keys);
+
+		function draw(input, speed) {
+
+			var data = result.filter(f => f.year == input)
+
+			keys.sort((a, b) => copy.indexOf(a) - copy.indexOf(b))
+
+			var series = d3.stack()
+				.keys(keys)
+				.offset(d3.stackOffsetDiverging)(data);
+
+			x.domain(data.map(d => d.quarter));
+
+			y.domain([
+				d3.min(series, stackMin),
+				d3.max(series, stackMax)
+			]).nice();
+
+			var barGroups = svg.selectAll("g.layer")
+				.data(series, d => d.key);
+
+			barGroups.exit().remove();
+
+			barGroups.enter().insert("g", ".x-axis")
+				.attr("fill", d => color(d.key))
+				.classed('layer', true);
+
+			var bars = svg.selectAll("g.layer").selectAll(".bars")
+				.data(d => d, d => d.data.quarter);
+
+			bars.exit().remove();
+
+			bars.enter().append("rect")
+				.attr("class", "bars")
+				.attr("width", x.bandwidth())
+				.attr("x", d => x(d.data.quarter))
+				.attr("y", d => y(d[1]))
+				.merge(bars)
+				.transition().duration(speed)
+				.attr("y", d => y(d[1]))
+				.attr("height", d => Math.abs(y(d[0])) - y(d[1]))
+
+			xAxis.transition().duration(speed)
+				.attr("transform", "translate(0," + y(0) + ")")
+				.call(d3.axisBottom(x));
+
+			yAxis.transition().duration(speed)
+				.call(d3.axisLeft(y));
+		}
+
+		function keyFilter() {
+
+			var value = d3.select(this).attr("value");
+
+			var thisColor = d3.select(this).attr("stroke");
+
+			if (d3.select(this).attr("fill") == "rgb(255, 255, 255)") {
+				d3.select(this).transition().duration(150)
+					.attr("fill", thisColor)
+
+				keys.push(value)
+			} else {
+				d3.select(this).transition().duration(150)
+					.attr("fill", "#fff")
+
+				keys.splice(keys.indexOf(value), 1);
+			}
+
+			draw(d3.select("#options").property("value"), 450, keys)
+		}
+
+		var selectYear = d3.select("#options")
+			.style("border-radius", "3px")
+			.style("padding", "1px 3px 1px 3px")
+			.on("change", function() {
+				draw(this.value, 750, keys)
+			})
+	}
+
+	function stackMin(serie) {
+		return d3.min(serie, function(d) { return d[0]; });
+	}
+
+	function stackMax(serie) {
+		return d3.max(serie, function(d) { return d[1]; });
+	}
+
+</script>
+</body>
