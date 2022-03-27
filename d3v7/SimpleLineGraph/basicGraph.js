@@ -1,4 +1,4 @@
-// set dimensions
+// set dimensions, width and height are of chart area
 let margin = {top: 20, right: 20, bottom: 30, left: 50},
 	width = 960 - margin.left - margin.right,
 	height = 500 - margin.top - margin.bottom;
@@ -11,9 +11,9 @@ let x = d3.scaleTime().range([0, width]);       // define the scale with range
 let y = d3.scaleLinear().range([height, 0]);    // reverse the range for y-axis
 
 // define the line
-let valueline = d3.line()       // return the frame for the line, w/ x and y definition
-	.x(d => d.date)
-	.y(d => d.close);
+let valueline = d3.line()       // return the frame for the line, x and y components are based on x and y scales
+	.x(d => x(d.date))
+	.y(d => y(d.close));
 
 // append svg to body, append a group to svg, and move group to top left margin
 let svg = d3.select("body").append("svg")
