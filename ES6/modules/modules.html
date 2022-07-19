@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modules</title>
+</head>
+<body>
+<p id="demo"></p>
+<script type="module">
+	import {name, age} from "./person.js";
+	import message from "./message.js";
+
+	document.getElementById('demo').innerHTML="My name is " + name + ", " + age + " years old.<br>";
+	document.getElementById('demo').innerHTML += message();
+</script>
+</body>
+</html>

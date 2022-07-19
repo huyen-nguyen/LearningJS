@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>this</title>
+</head>
+<body>
+<p id="demo"></p>
+
+<button id="btn">Click me!</button>
+<script>
+	class Header {
+		constructor() {
+			this.color = "red";
+		}
+
+		// changeColor = function(){
+		changeColor = () => {
+			// change the text displayed within 'demo' element
+			document.getElementById('demo').innerHTML += this; // to see what `this` is
+		}
+	}
+
+	// create instance
+	const myHeader = new Header();
+
+	// the window object that calls the function
+	window.addEventListener('load', myHeader.changeColor);	// [object Window]
+															// [object Object] (Header object)
+	// a button object that calls the function
+	document.getElementById('btn').addEventListener('click', myHeader.changeColor); // [object HTMLButtonElement]
+																					// [object Object] (Header object)
+
+</script>
+</body>
+</html>

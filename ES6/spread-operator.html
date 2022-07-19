@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spread Operator</title>
+</head>
+<body>
+<script>
+	const one = [1, 2, 3];
+	const two = [4,5,6];
+	const combine = [...one, ...two];
+	// document.write(combine);
+
+	const numbers = [1,2,3,4,5,6];
+	const [_one, _two, ...rest] = numbers;
+	// document.write(_one, '<br>', _two, '<br>', rest);
+
+	// combine objects
+	const car = {
+		brand: 'Ford',
+		model: 'Mustang',
+		color: 'red'
+	}
+	const updatedCar = {
+		type: 'sport',
+		year: 2021,
+		color: 'yellow'
+	}
+	const myUpdatedCar = {...car, ...updatedCar};
+	// matched property was overwitten by the last object.
+	// color is now yellow
+
+	console.log(myUpdatedCar);
+</script>
+</body>
+</html>

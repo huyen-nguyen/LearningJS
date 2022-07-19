@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Classes</title>
+</head>
+<body>
+<script>
+	class Car{
+		// constructor() method to assign properties
+		constructor(name) {
+			this.brand = name;	// here the property is 'brand'
+		}
+
+		// add my own methods
+		present(){
+			return "I have a " + this.brand + " 😎";
+		}
+	}
+
+	class Model extends Car{
+		// assign properties
+		constructor(name, mod) {
+			super(name); // call the parent's constructor method, gets access to the parent's properties and methods
+			this.model = mod;
+		}
+
+		// its own methods
+		show(){
+			return this.present() + " it is a " + this.model;
+		}
+	}
+
+
+	const mycar = new Model("Dodge", "Challenger");
+	document.write(mycar.show());
+</script>
+</body>
+</html>
