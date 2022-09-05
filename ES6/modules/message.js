@@ -1,3 +1,4 @@
+// message is a function, exported with default
 const message = () => {
 	const name = 'Jesse';
 	const age = 40;
